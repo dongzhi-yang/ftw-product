@@ -1,36 +1,46 @@
-const { getSdk, handleError, serialize } = require('../api-util/sdk');
+const { getSdk, handleError, serialize, integrationSdk } = require('../api-util/sdk');
+let { types } = require('sharetribe-flex-sdk');
+const { UUID } = types;
 
 module.exports = (req, res) => {
-    const sdk = getSdk(req, res);
     if (req.body.session && req.body.session.status && req.body.session.status === "COMPLETE") {
         let getResult = req.body.session;
-        let createObj = {
-            ...getResult,
-            brand: getResult.vehicle.make,
-            title: getResult.vehicle.year + getResult.vehicle.make + getResult.vehicle.model,
-            description: Object.values(getResult.vehicle).join(", ")
-        };
-        ["inspect_ended_at",
-            "source",
-            "brand",
-            "user_account",
-            "theme",
-            "updated_at",
-            "status",
-            "language",
-            "active",
-            "redirect_url",
-            "vehicle",
-            "options",
-            "session_key",
-            "created_at",
-            "inspect_started_at"].forEach((ele) => delete createObj[ele])
-        sdk.ownListings.create(createObj, { expand: true }).then(ress => {
-            res.status(200).send(ress.data)
+        integrationSdk.listings.query().then(ress => {
+            let newArray = ress.data.data || []
+            let findList = newArray.filter(ele => (ele.attributes.publicData.session_key === getResult.session_key))[0]
+            let updateObj = {
+                id: new UUID(findList.id.uuid),
+                // brand: getResult.vehicle && getResult.vehicle.make,
+                title: getResult.vehicle.year + getResult.vehicle.make + getResult.vehicle.model,
+                description: Object.values(getResult.vehicle).join(", "),
+                publicData: { ...getResult }
+            }
+            integrationSdk.listings.update(updateObj).then(out => {
+                res.status(200).send(out.data)
+
+            }).catch(e => {
+                handleError(res, e)
+            })
         }).catch(err => {
             handleError(res, err)
         })
-    } else {
-        res.status(500).send("No Session found.")
+
     }
+
+    // if (req.body.session && req.body.session.status && req.body.session.status === "COMPLETE") {
+    //     let getResult = req.body.session;
+    //     let createObj = {
+    //         ...getResult,
+    //         brand: getResult.vehicle.make,
+    //         title: getResult.vehicle.year + getResult.vehicle.make + getResult.vehicle.model,
+    //         description: Object.values(getResult.vehicle).join(", ")
+    //     };
+    //     sdk.ownListings.create(createObj, { expand: true }).then(ress => {
+    //         res.status(200).send(ress.data)
+    //     }).catch(err => {
+    //         handleError(res, err)
+    //     })
+    // } else {
+    //     res.status(500).send("No Session found.")
+    // }
 };
