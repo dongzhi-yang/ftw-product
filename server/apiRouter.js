@@ -14,6 +14,8 @@ const initiateLoginAs = require('./api/initiate-login-as');
 const loginAs = require('./api/login-as');
 const transactionLineItems = require('./api/transaction-line-items');
 const paveSession = require('./api/pave-session');
+const getListing = require('./api/shareTribeListing')
+const addListing = require('./api/addShareTribeListing')
 const initiatePrivileged = require('./api/initiate-privileged');
 const transitionPrivileged = require('./api/transition-privileged');
 
@@ -54,6 +56,8 @@ router.get('/initiate-login-as', initiateLoginAs);
 router.get('/login-as', loginAs);
 router.post('/transaction-line-items', transactionLineItems);
 router.post('/create-session', paveSession);
+router.get('/getShareTribeList', getListing);
+router.post('/shareTribeWebhookUri', addListing);
 router.post('/initiate-privileged', initiatePrivileged);
 router.post('/transition-privileged', transitionPrivileged);
 

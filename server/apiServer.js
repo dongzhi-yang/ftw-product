@@ -24,6 +24,8 @@ app.use(
     credentials: true,
   })
 );
+app.use(express.json({ type: "application/json" }));
+
 app.use(cookieParser());
 app.use('/.well-known', wellKnownRouter);
 app.use('/api', apiRouter);

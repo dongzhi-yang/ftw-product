@@ -1,10 +1,7 @@
 let crypto = require('crypto');
 const axios = require('axios');
 
-const { getSdk, handleError, serialize } = require('../api-util/sdk');
-
-
-
+const { getSdk, handleError, getTrustedSdk, serialize } = require('../api-util/sdk');
 
 
 module.exports = (req, res) => {
@@ -13,7 +10,6 @@ module.exports = (req, res) => {
     let hmac = crypto.createHmac("sha256", process.env.PAVE_SECRET);
     hmac.setEncoding('hex');
     hmac.end(`${process.env.PAVE_USERNAME}:${process.env.PAVE_API_KEY}@${date}`, function () {
-
         let config = {
             method: 'post',
             url: 'https://openapi.paveapi.com/v1/sessions',
@@ -26,10 +22,22 @@ module.exports = (req, res) => {
         axios(config)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
-                res.status(200).send(response.data)
+                let sdk = getSdk(req,res)
+                let getResult = response.data;
+                let createObj = {
+                    title: "new title",
+                    description: "new description",
+                    publicData: {
+                        session_key: getResult.session_key
+                    }
+                };
+                sdk.ownListings.createDraft(createObj, { expand: true }).then(ress => {
+                    res.status(200).send(response.data)
+                }).catch(err => {
+                    handleError(res, err)
+                })
             })
             .catch(function (error) {
-                console.log(error);
                 handleError(res, error);
             });
     });
