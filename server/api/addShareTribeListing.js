@@ -9,7 +9,6 @@ module.exports = (req, res) => {
             let newArray = ress.data.data || []
             let findList = newArray.filter(ele => (ele.attributes.publicData.session_key === getResult.session_key))[0]
             if (findList) {
-
                 let updateObj = {
                     id: new UUID(findList.id.uuid),
                     // brand: getResult.vehicle && getResult.vehicle.make,

@@ -1,9 +1,6 @@
-const { getSdk, handleError, serialize } = require('../api-util/sdk');
-
+const { getSdk, handleError, serialize, integrationSdk } = require('../api-util/sdk');
 module.exports = (req, res) => {
-    const sdk = getSdk(req, res);
-
-    sdk.listings.query().then(ress => {
+    integrationSdk.listings.query().then(ress => {
         res.status(200).send(ress.data)
     }).catch(err => {
         handleError(res, err)
