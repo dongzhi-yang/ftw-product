@@ -17,6 +17,7 @@ import {
   LISTING_PAGE_PARAM_TYPE_EDIT,
   createSlug,
 } from '../../util/urlHelpers';
+import { getImageVariants } from '../../util/imageVariants';
 import { formatMoney, convertMoneyToNumber } from '../../util/currency';
 import { createResourceLocatorString, findRouteByRouteName } from '../../util/routes';
 import {
@@ -79,6 +80,12 @@ const priceData = (price, intl) => {
 const categoryLabel = (categories, key) => {
   const cat = categories.find(c => c.key === key);
   return cat ? cat.label : key;
+};
+
+const pageTitle = publicData => {
+  return `${publicData?.vehicle?.year || ''} ${publicData?.vehicle?.make || ''} ${
+    publicData?.vehicle?.model
+  }`.trim();
 };
 
 export class ListingPageComponent extends Component {
@@ -221,9 +228,13 @@ export class ListingPageComponent extends Component {
         ? ensureOwnListing(getOwnListing(listingId))
         : ensureListing(getListing(listingId));
 
-    const listingSlug = rawParams.slug || createSlug(currentListing.attributes.title || '');
-    const params = { slug: listingSlug, ...rawParams };
+    currentListing.images = getImageVariants(currentListing.attributes.publicData.photos);
+    currentListing.attributes.title = pageTitle(currentListing.attributes.publicData);
 
+    const listingSlug =
+      rawParams.slug || createSlug(pageTitle(currentListing.attributes.publicData) || '');
+
+    const params = { slug: listingSlug, ...rawParams };
     const listingType = isDraftVariant
       ? LISTING_PAGE_PARAM_TYPE_DRAFT
       : LISTING_PAGE_PARAM_TYPE_EDIT;
