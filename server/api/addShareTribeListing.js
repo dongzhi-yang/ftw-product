@@ -5,7 +5,8 @@ const { UUID } = types;
 module.exports = (req, res) => {
     if (req.body.session && req.body.session.status && req.body.session.status === "COMPLETE") {
         let getResult = req.body.session;
-        integrationSdk.listings.query().then(ress => {
+        let findKey = getResult.session_key
+        integrationSdk.listings.query({ "keywords": findKey.slice(4) }).then(ress => {
             let newArray = ress.data.data || []
             let findList = newArray.filter(ele => (ele.attributes.publicData.session_key === getResult.session_key))[0]
             if (findList) {
