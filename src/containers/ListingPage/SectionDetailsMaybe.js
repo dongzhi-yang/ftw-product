@@ -43,7 +43,7 @@ const SectionDetailsMaybe = props => {
           </li>
         ))}
 
-        {Object.keys(vehicle).map(key => {
+        {Object.keys(vehicle || {}).map(key => {
           if (!skipFields.includes(key) && vehicle[key]) {
             return (
               <li key={key} className={css.detailsRow}>

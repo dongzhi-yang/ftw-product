@@ -1,4 +1,5 @@
 import { updatedEntities, denormalisedEntities } from '../util/data';
+import { transformListing } from '../util/listings';
 
 // ================ Action types ================ //
 
@@ -23,7 +24,8 @@ export default function marketplaceDataReducer(state = initialState, action = {}
   const { type, payload } = action;
   switch (type) {
     case ADD_MARKETPLACE_ENTITIES:
-      return merge(state, payload);
+      // return merge(state, payload);
+      return merge(state, transformListing(payload));
 
     default:
       return state;
