@@ -1,3 +1,6 @@
+/*
+  getImageVariants: a utility function to generate different mock variants of the image based on an image object based on photos returned from paveapi
+*/
 import { types as sdkTypes } from './sdkLoader';
 const { UUID } = sdkTypes;
 
