@@ -3,6 +3,7 @@ import { arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
 import classNames from 'classnames';
+import { useHistory } from 'react-router-dom';
 
 // Import configs and util modules
 import config from '../../../../config';
@@ -40,16 +41,26 @@ const EditListingDetailsFormComponent = props => (
         filterConfig,
       } = formRenderProps;
 
-      const [sessionCreated, setSessionCreated] = useState(props?.initialValues?.description);
       const [sessionCreating, setSessionCreating] = useState(false);
-      const [title, setTitle] = useState();
       const titleMessage = intl.formatMessage({ id: 'EditListingDetailsForm.title' });
+      const labelMessage = label => intl.formatMessage({ id: `EditListingDetailsForm.${label}` });
       const titlePlaceholderMessage = intl.formatMessage({
         id: 'EditListingDetailsForm.titlePlaceholder',
       });
+      const labelPlaceholderMessage = label =>
+        intl.formatMessage({
+          id: 'EditListingDetailsForm.placeholder',
+          values: { label: label },
+        });
+
       const titleRequiredMessage = intl.formatMessage({
         id: 'EditListingDetailsForm.titleRequired',
       });
+      const requiredMessage = label =>
+        intl.formatMessage({
+          id: 'EditListingDetailsForm.required',
+          values: { label: label },
+        });
       const maxLengthMessage = intl.formatMessage(
         { id: 'EditListingDetailsForm.maxLength' },
         {
@@ -140,21 +151,24 @@ const EditListingDetailsFormComponent = props => (
           id: 'EditListingDetailsForm.brandRequired',
         })
       );
-
+      const history = useHistory();
       const onClickContinueSession = () => {
         window.open(
-          `https://api.paveapi.com/v1/launch/${props.initialValues.description}`,
+          `https://api.paveapi.com/v1/launch/${title || props.initialValues.title}`,
           '_blank'
         );
       };
+
       const onClickCreateSession = () => {
         setSessionCreating(true);
         createSession().then(apiResponse => {
           setSessionCreating(false);
-          setSessionCreated(true);
-          setTitle(apiResponse.session_key);
-          console.log(apiResponse.session_key);
           window.open(`https://api.paveapi.com/v1/launch/${apiResponse.session_key}`, '_blank');
+          history.replace(
+            `/l/${apiResponse.session_key.toLowerCase()}/${
+              apiResponse.listingData.id.uuid
+            }/draft/details`
+          );
         });
       };
 
@@ -164,7 +178,7 @@ const EditListingDetailsFormComponent = props => (
           {errorMessageUpdateListing}
           {errorMessageShowListing}
 
-          {sessionCreated ? (
+          {props.initialValues.title ? (
             <a onClick={onClickContinueSession}>Session has been created. Continue Here</a>
           ) : (
             <>
@@ -180,6 +194,12 @@ const EditListingDetailsFormComponent = props => (
               </p>
             </>
           )}
+
+          {props.initialValues.title && !props.initialValues.vin ? (
+            <p className={css.error}>
+              Please refresh the page in a minute if you don't see the filled data
+            </p>
+          ) : null}
           <FieldTextInput
             id="title"
             name="title"
@@ -191,7 +211,6 @@ const EditListingDetailsFormComponent = props => (
             validate={composeValidators(required(titleRequiredMessage), maxLength60Message)}
             autoFocus={autoFocus}
             disabled={true}
-            defaultValue={title || props.initialValues.title}
           />
           <FieldTextInput
             id="description"
@@ -201,27 +220,171 @@ const EditListingDetailsFormComponent = props => (
             label={descriptionMessage}
             placeholder={descriptionPlaceholderMessage}
             validate={composeValidators(required(descriptionRequiredMessage))}
+            disabled={true}
           />
-          <CustomFieldEnum
-            id="category"
-            name="category"
-            options={categories}
-            label={categoryLabel}
-            placeholder={categoryPlaceholder}
-            validate={categoryRequired}
-            schemaType={categorySchemaType}
+          <FieldTextInput
+            id="id"
+            name="id"
+            className={css.title}
+            type="text"
+            label={labelMessage('id')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('id')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
           />
-
-          <CustomFieldEnum
-            id="size"
-            name="size"
-            options={sizes}
-            label={sizeLabel}
-            placeholder={sizePlaceholder}
-            validate={sizeRequired}
-            schemaType={sizeSchemaType}
+          <FieldTextInput
+            id="vin"
+            name="vin"
+            className={css.title}
+            type="text"
+            label={labelMessage('vin')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('vin')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
           />
-
+          <FieldTextInput
+            id="year"
+            name="year"
+            className={css.title}
+            type="text"
+            label={labelMessage('year')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('year')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="make"
+            name="make"
+            className={css.title}
+            type="text"
+            label={labelMessage('make')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('make')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="model"
+            name="model"
+            className={css.title}
+            type="text"
+            label={labelMessage('model')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('model')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="bodyType"
+            name="bodyType"
+            className={css.title}
+            type="text"
+            label={labelMessage('bodyType')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('bodyType')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="trim"
+            name="trim"
+            className={css.title}
+            type="text"
+            label={labelMessage('trim')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('trim')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="transmission"
+            name="transmission"
+            className={css.title}
+            type="text"
+            label={labelMessage('transmission')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(
+              required(requiredMessage('transmission')),
+              maxLength60Message
+            )}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="engineType"
+            name="engineType"
+            className={css.title}
+            type="text"
+            label={labelMessage('engineType')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(
+              required(requiredMessage('engineType')),
+              maxLength60Message
+            )}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="fuelType"
+            name="fuelType"
+            className={css.title}
+            type="text"
+            label={labelMessage('fuelType')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('fuelType')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="extCol"
+            name="extCol"
+            className={css.title}
+            type="text"
+            label={labelMessage('extCol')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('extCol')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="intCol"
+            name="intCol"
+            className={css.title}
+            type="text"
+            label={labelMessage('intCol')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('intCol')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="odomReading"
+            name="odomReading"
+            className={css.title}
+            type="text"
+            label={labelMessage('odomReading')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(
+              required(requiredMessage('odomReading')),
+              maxLength60Message
+            )}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
+          <FieldTextInput
+            id="odomUnit"
+            name="odomUnit"
+            className={css.title}
+            type="text"
+            label={labelMessage('odomUnit')}
+            maxLength={TITLE_MAX_LENGTH}
+            validate={composeValidators(required(requiredMessage('odomUnit')), maxLength60Message)}
+            autoFocus={autoFocus}
+            disabled={true}
+          />
           <CustomFieldEnum
             id="brand"
             name="brand"
@@ -230,6 +393,7 @@ const EditListingDetailsFormComponent = props => (
             placeholder={brandPlaceholder}
             validate={brandRequired}
             schemaType={brandSchemaType}
+            disabled={true}
           />
 
           <Button
