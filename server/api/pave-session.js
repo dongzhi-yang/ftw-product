@@ -22,10 +22,10 @@ module.exports = (req, res) => {
         axios(config)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
-                let sdk = getSdk(req,res)
+                let sdk = getSdk(req, res)
                 let getResult = response.data;
                 let createObj = {
-                    title: "new title",
+                    title: getResult.session_key,
                     description: "new description",
                     publicData: {
                         session_key: getResult.session_key
