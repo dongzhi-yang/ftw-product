@@ -47,3 +47,11 @@
     margin-top: 100px;
   }
 }
+
+.aiButton {
+  color: rebeccapurple;
+}
+
+.aiButton:hover {
+  border-color: rebeccapurple;
+}

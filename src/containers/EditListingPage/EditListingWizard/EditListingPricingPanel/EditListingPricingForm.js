@@ -98,19 +98,6 @@ export const EditListingPricingFormComponent = props => (
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />
-
-          <FieldTextInput
-            className={css.input}
-            id="stock"
-            name="stock"
-            label={intl.formatMessage({ id: 'EditListingPricingForm.stockLabel' })}
-            placeholder={intl.formatMessage({ id: 'EditListingPricingForm.stockPlaceholder' })}
-            type="number"
-            min={0}
-            validate={stockValidator}
-          />
-          {setStockError ? <p className={css.error}>{stockErrorMessage}</p> : null}
-
           <Button
             className={css.submitButton}
             type="submit"

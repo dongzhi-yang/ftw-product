@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
@@ -10,9 +10,10 @@ import { intlShape, injectIntl, FormattedMessage } from '../../../../util/reactI
 import { propTypes } from '../../../../util/types';
 import { maxLength, required, composeValidators } from '../../../../util/validators';
 import { findConfigForSelectFilter } from '../../../../util/search';
+import { createSession } from '../../../../util/api';
 
 // Import shared components
-import { Form, Button, FieldTextInput } from '../../../../components';
+import { Form, Button, FieldTextInput, SecondaryButton } from '../../../../components';
 // Import modules from this directory
 import CustomFieldEnum from '../CustomFieldEnum';
 import css from './EditListingDetailsForm.module.css';
@@ -39,6 +40,9 @@ const EditListingDetailsFormComponent = props => (
         filterConfig,
       } = formRenderProps;
 
+      const [sessionCreated, setSessionCreated] = useState(props?.initialValues?.description);
+      const [sessionCreating, setSessionCreating] = useState(false);
+      const [title, setTitle] = useState();
       const titleMessage = intl.formatMessage({ id: 'EditListingDetailsForm.title' });
       const titlePlaceholderMessage = intl.formatMessage({
         id: 'EditListingDetailsForm.titlePlaceholder',
@@ -137,11 +141,45 @@ const EditListingDetailsFormComponent = props => (
         })
       );
 
+      const onClickContinueSession = () => {
+        window.open(
+          `https://api.paveapi.com/v1/launch/${props.initialValues.description}`,
+          '_blank'
+        );
+      };
+      const onClickCreateSession = () => {
+        setSessionCreating(true);
+        createSession().then(apiResponse => {
+          setSessionCreating(false);
+          setSessionCreated(true);
+          setTitle(apiResponse.session_key);
+          console.log(apiResponse.session_key);
+          window.open(`https://api.paveapi.com/v1/launch/${apiResponse.session_key}`, '_blank');
+        });
+      };
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessageCreateListingDraft}
           {errorMessageUpdateListing}
           {errorMessageShowListing}
+
+          {sessionCreated ? (
+            <a onClick={onClickContinueSession}>Session has been created. Continue Here</a>
+          ) : (
+            <>
+              <SecondaryButton
+                inProgress={sessionCreating}
+                className={css.aiButton}
+                onClick={onClickCreateSession}
+              >
+                <FormattedMessage id="EditListingDetailsPanel.capture" />
+              </SecondaryButton>
+              <p className={css.error}>
+                You cannot continue without creating a session. Click the AI button
+              </p>
+            </>
+          )}
           <FieldTextInput
             id="title"
             name="title"
@@ -152,6 +190,8 @@ const EditListingDetailsFormComponent = props => (
             maxLength={TITLE_MAX_LENGTH}
             validate={composeValidators(required(titleRequiredMessage), maxLength60Message)}
             autoFocus={autoFocus}
+            disabled={true}
+            defaultValue={title || props.initialValues.title}
           />
           <FieldTextInput
             id="description"
