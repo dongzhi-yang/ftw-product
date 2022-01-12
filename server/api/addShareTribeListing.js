@@ -20,7 +20,7 @@ module.exports = (req, res) => {
             // brand: getResult.vehicle && getResult.vehicle.make,
             title: `${getResult.vehicle.year} ${getResult.vehicle.make} ${getResult.vehicle.model}`,
             description: Object.values(getResult.vehicle).join(', '),
-            publicData: { ...getResult, photos },
+            publicData: { ...req.body, ...getResult, brand: getResult.vehicle.make },
           };
           integrationSdk.listings
             .update(updateObj)

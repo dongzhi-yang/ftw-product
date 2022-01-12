@@ -386,7 +386,7 @@ export class ListingPageComponent extends Component {
     const productURL = `${config.canonicalRootURL}${location.pathname}${location.search}${location.hash}`;
     const brand = currentListing?.attributes?.publicData?.brand;
     const brandMaybe = brand ? { brand: { '@type': 'Brand', name: brand } } : {};
-    const schemaPriceNumber = intl.formatNumber(convertMoneyToNumber(price), {
+    const schemaPriceNumber = intl.formatNumber(price ? convertMoneyToNumber(price) : 0, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
@@ -434,7 +434,7 @@ export class ListingPageComponent extends Component {
           offers: {
             '@type': 'Offer',
             url: productURL,
-            priceCurrency: price.currency,
+            priceCurrency: price?.currency,
             price: schemaPriceNumber,
             availability: schemaAvailability,
           },

@@ -494,6 +494,15 @@
   }
 }
 
+.reportButton {
+  color: rebeccapurple;
+  margin-top: 32px;
+}
+
+.reportButton:hover {
+  border-color: rebeccapurple;
+}
+
 .details {
   padding-bottom: 1px;
   margin: 0;

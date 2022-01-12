@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from '../../util/reactIntl';
-import { PropertyGroup } from '../../components';
+import { SecondaryButton, PropertyGroup } from '../../components';
 import { camelCase } from 'lodash';
 import css from './ListingPage.module.css';
 
@@ -30,6 +30,9 @@ const SectionDetailsMaybe = props => {
 
   const existingExtendedData = listing?.enumFieldDetails.reduce(pickExtendedData(filters), []);
 
+  const openReport = () => {
+    window.open(publicData.condition_report, '_blank');
+  };
   return existingExtendedData ? (
     <div className={css.sectionDetails}>
       <h2 className={css.detailsTitle}>
@@ -55,6 +58,12 @@ const SectionDetailsMaybe = props => {
             );
           }
         })}
+
+        {publicData.condition_report ? (
+          <SecondaryButton className={css.reportButton} onClick={openReport}>
+            View Condition Report
+          </SecondaryButton>
+        ) : null}
       </ul>
     </div>
   ) : null;

@@ -12,8 +12,8 @@ const apiRouter = require('./apiRouter');
 const wellKnownRouter = require('./wellKnownRouter');
 
 const radix = 10;
-//const PORT = parseInt(process.env.REACT_APP_DEV_API_SERVER_PORT, radix);
-const PORT = 3500;
+const PORT = parseInt(process.env.REACT_APP_DEV_API_SERVER_PORT, radix);
+// const PORT = 3500;
 const app = express();
 
 // NOTE: CORS is only needed in this dev API server because it's
@@ -24,7 +24,7 @@ app.use(
     credentials: true,
   })
 );
-app.use(express.json({ type: "application/json" }));
+app.use(express.json({ type: 'application/json' }));
 
 app.use(cookieParser());
 app.use('/.well-known', wellKnownRouter);

@@ -138,7 +138,7 @@ const OrderPanel = props => {
           <h2 className={titleClasses}>{title}</h2>
           {subTitleText ? <div className={css.orderHelp}>{subTitleText}</div> : null}
         </div>
-        <p className={css.price}>{formatMoney(intl, price)}</p>
+        <p className={css.price}>{price ? formatMoney(intl, price) : null}</p>
         <div className={css.author}>
           <AvatarSmall user={author} className={css.providerAvatar} />
           <FormattedMessage id="OrderPanel.soldBy" values={{ name: authorDisplayName }} />

@@ -20,7 +20,8 @@ export const isTypeListing = payload => {
   if (!payload?.data?.data) {
     return false;
   }
-  if (Array.isArray(payload?.data?.data)) {
+  if (Array.isArray(payload.data.data)) {
+    if (!payload.data.data.length) return false;
     return payload.data.data[0].type.toLowerCase().includes('listing');
   }
   return payload.data.data.type.toLowerCase().includes('listing');
@@ -58,7 +59,7 @@ export const modifyListing = listing => {
     },
     attributes: {
       ...listing.attributes,
-      title: getTitle(listing.attributes.publicData?.vehicle),
+      title: listing.attributes.title || getTitle(listing.attributes.publicData?.vehicle),
       publicData: {
         ...listing.attributes.publicData,
         // brand: getBrand(listing.attributes.publicData?.vehicle),
@@ -69,7 +70,7 @@ export const modifyListing = listing => {
 };
 
 export const getTitle = vehicle => {
-  return `${vehicle?.year || ''} ${vehicle?.make || ''} ${vehicle?.model}`.trim();
+  return `${vehicle?.year || ''} ${vehicle?.make || ''} ${vehicle?.model || ''}`.trim();
 };
 
 export const getImageVariants = images => {
