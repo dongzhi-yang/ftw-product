@@ -41,6 +41,7 @@ import {
 import MenuIcon from './MenuIcon';
 import Overlay from './Overlay';
 import css from './ManageListingCard.module.css';
+import { getImageVariants } from '../../../util/listings';
 
 // Menu content needs the same padding
 const MENU_CONTENT_OFFSET = -12;
@@ -140,8 +141,10 @@ export const ManageListingCardComponent = props => {
   const isOutOfStock = currentStock === 0;
   const showOutOfStockOverlay = isOutOfStock && !isPendingApproval && !isClosed && !isDraft;
 
-  const firstImage =
+  let firstImage =
     currentListing.images && currentListing.images.length > 0 ? currentListing.images[0] : null;
+
+  firstImage = getImageVariants(currentListing.attributes.publicData.photos)[0];
 
   const menuItemClasses = classNames(css.menuItem, {
     [css.menuItemDisabled]: !!actionsInProgressListingId,
