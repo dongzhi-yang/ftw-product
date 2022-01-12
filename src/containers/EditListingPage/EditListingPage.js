@@ -43,6 +43,7 @@ import {
 } from './EditListingPage.duck';
 import EditListingWizard from './EditListingWizard/EditListingWizard';
 import css from './EditListingPage.module.css';
+import { getImageVariants } from '../../util/listings';
 
 const STRIPE_ONBOARDING_RETURN_URL_SUCCESS = 'success';
 const STRIPE_ONBOARDING_RETURN_URL_FAILURE = 'failure';
@@ -184,12 +185,14 @@ export const EditListingPageComponent = props => {
 
     // Show form if user is posting a new listing or editing existing one
     const disableForm = page.redirectToListing && !showListingsError;
-    const images = pickRenderableImages(
+    let images = pickRenderableImages(
       currentListing,
       uploadedImages,
       uploadedImagesOrder,
       removedImageIds
     );
+
+    images = getImageVariants(currentListing.attributes.publicData.photos);
 
     const title = isNewListingFlow
       ? intl.formatMessage({ id: 'EditListingPage.titleCreateListing' })

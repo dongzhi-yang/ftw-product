@@ -211,10 +211,7 @@ export class EditListingPhotosFormComponent extends Component {
               ) : null}
 
               <div className={css.imagesField}>
-                <FieldArray
-                  name="images"
-                  validate={composeValidators(nonEmptyArray(imageRequiredMessage))}
-                >
+                <FieldArray name="images">
                   {({ fields }) =>
                     fields.map((name, index) => (
                       <FieldListingImage
@@ -230,7 +227,7 @@ export class EditListingPhotosFormComponent extends Component {
                   }
                 </FieldArray>
 
-                <FieldAddImage
+                {/* <FieldAddImage
                   id="addImage"
                   name="addImage"
                   accept={ACCEPT_IMAGES}
@@ -239,7 +236,7 @@ export class EditListingPhotosFormComponent extends Component {
                   disabled={imageUploadRequested}
                   formApi={form}
                   onImageUploadHandler={onImageUploadHandler}
-                />
+                /> */}
               </div>
               {imagesError ? <div className={css.arrayError}>{imagesError}</div> : null}
               {uploadImageFailed}

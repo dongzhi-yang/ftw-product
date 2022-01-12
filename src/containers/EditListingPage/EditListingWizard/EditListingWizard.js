@@ -73,7 +73,7 @@ const tabCompleted = (tab, listing) => {
 
   switch (tab) {
     case DETAILS:
-      return !!(description && title);
+      return !!(description && title && publicData);
     case DELIVERY:
       return !!deliveryOptionPicked;
     case PRICING:

@@ -35,57 +35,6 @@
 
 export const filters = [
   {
-    id: 'category',
-    label: 'Category',
-    type: 'SelectSingleFilter',
-    group: 'primary',
-    queryParamNames: ['pub_category'],
-    config: {
-      // Schema type is enum for SelectSingleFilter
-      schemaType: 'enum',
-
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for the UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        { key: 'men', label: 'Men' },
-        { key: 'women', label: 'Women' },
-        { key: 'kids', label: 'Kids' },
-      ],
-    },
-  },
-  {
-    id: 'size',
-    label: 'Size (US)',
-    type: 'SelectMultipleFilter',
-    group: 'primary',
-    queryParamNames: ['pub_size'],
-    config: {
-      // Schema type options: 'enum', 'multi-enum'
-      // Both types can work so that user selects multiple values when filtering search results.
-      // With "enum" the functionality will be OR-semantics (Nike OR Adidas OR Salomon)
-      // With "multi-enum" it's possible to use both AND and OR semantics with searchMode config.
-      schemaType: 'enum',
-
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for the UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        { key: '4', label: '4' },
-        { key: '5', label: '5' },
-        { key: '6', label: '6' },
-        { key: '7', label: '7' },
-        { key: '8', label: '8' },
-        { key: '9', label: '9' },
-        { key: '10', label: '10' },
-        { key: '11', label: '11' },
-        { key: '12', label: '12' },
-      ],
-    },
-  },
-  {
     id: 'brand',
     label: 'Brand',
     type: 'SelectMultipleFilter',
@@ -103,16 +52,56 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'adidas', label: 'Adidas' },
-        { key: 'air_jordan', label: 'Air Jordan' },
-        { key: 'converse', label: 'Converse' },
-        { key: 'new_balance', label: 'New Balance' },
-        { key: 'nike', label: 'Nike' },
-        { key: 'puma', label: 'Puma' },
-        { key: 'ultraboost', label: 'Ultraboost' },
-        { key: 'vans', label: 'Vans' },
-        { key: 'yeezy', label: 'Yeezy' },
-        { key: 'other', label: 'Other' },
+        { key: 'toyota', label: 'Toyota' },
+        { key: 'honda', label: 'Honda' },
+        { key: 'chevrolet', label: 'Chevrolet' },
+        { key: 'ford', label: 'Ford' },
+        { key: 'mercedes_benz', label: 'Mercedes-Benz' },
+        { key: 'jeep', label: 'Jeep' },
+        { key: 'bmw', label: 'BMW' },
+        { key: 'porsche', label: 'Porsche' },
+        { key: 'subaru', label: 'Subaru' },
+        { key: 'nissan', label: 'Nissan' },
+        { key: 'cadillac', label: 'Cadillac' },
+        { key: 'volkswagen', label: 'Volkswagen' },
+        { key: 'lexus', label: 'Lexus' },
+        { key: 'audi', label: 'Audi' },
+        { key: 'ferrari', label: 'Ferrari' },
+        { key: 'volvo', label: 'Volvo' },
+        { key: 'jaguar', label: 'Jaguar' },
+        { key: 'gmc', label: 'GMC' },
+        { key: 'buick', label: 'Buick' },
+        { key: 'acura', label: 'Acura' },
+        { key: 'bentley', label: 'Bentley' },
+        { key: 'dodge', label: 'Dodge' },
+        { key: 'hyundai', label: 'Hyundai' },
+        { key: 'lincoln', label: 'Lincoln' },
+        { key: 'mazda', label: 'Mazda' },
+        { key: 'land_rover', label: 'Land Rover' },
+        { key: 'tesla', label: 'Tesla' },
+        { key: 'ram_trucks', label: 'Ram Trucks' },
+        { key: 'kia', label: 'Kia' },
+        { key: 'chrysler', label: 'Chrysler' },
+        { key: 'pontiac', label: 'Pontiac' },
+        { key: 'infiniti', label: 'Infiniti' },
+        { key: 'mitsubishi', label: 'Mitsubishi' },
+        { key: 'oldsmobile', label: 'Oldsmobile' },
+        { key: 'maserati', label: 'Maserati' },
+        { key: 'aston_martin', label: 'Aston Martin' },
+        { key: 'bugatti', label: 'Bugatti' },
+        { key: 'fiat', label: 'Fiat' },
+        { key: 'mini', label: 'Mini' },
+        { key: 'alfa_romeo', label: 'Alfa Romeo' },
+        { key: 'saab', label: 'Saab' },
+        { key: 'genesis', label: 'Genesis' },
+        { key: 'suzuki', label: 'Suzuki' },
+        { key: 'studebaker', label: 'Studebaker' },
+        { key: 'renault', label: 'Renault' },
+        { key: 'peugeot', label: 'Peugeot' },
+        { key: 'daewoo', label: 'Daewoo' },
+        { key: 'hudson', label: 'Hudson' },
+        { key: 'citroen', label: 'Citroen' },
+        { key: 'mg', label: 'MG' },
       ],
     },
   },

@@ -18,6 +18,7 @@ import { Form, Button, FieldTextInput, SecondaryButton } from '../../../../compo
 // Import modules from this directory
 import CustomFieldEnum from '../CustomFieldEnum';
 import css from './EditListingDetailsForm.module.css';
+import { camelCase } from 'lodash';
 
 const TITLE_MAX_LENGTH = 60;
 
@@ -40,10 +41,11 @@ const EditListingDetailsFormComponent = props => (
         fetchErrors,
         filterConfig,
       } = formRenderProps;
-
       const [sessionCreating, setSessionCreating] = useState(false);
       const titleMessage = intl.formatMessage({ id: 'EditListingDetailsForm.title' });
-      const labelMessage = label => intl.formatMessage({ id: `EditListingDetailsForm.${label}` });
+      const labelMessage = label =>
+        intl.formatMessage({ id: `EditListingDetailsForm.${camelCase(label)}` });
+
       const titlePlaceholderMessage = intl.formatMessage({
         id: 'EditListingDetailsForm.titlePlaceholder',
       });
@@ -57,10 +59,8 @@ const EditListingDetailsFormComponent = props => (
         id: 'EditListingDetailsForm.titleRequired',
       });
       const requiredMessage = label =>
-        intl.formatMessage({
-          id: 'EditListingDetailsForm.required',
-          values: { label: label },
-        });
+        intl.formatMessage({ id: 'EditListingDetailsForm.required' }, { label: label });
+
       const maxLengthMessage = intl.formatMessage(
         { id: 'EditListingDetailsForm.maxLength' },
         {
@@ -104,38 +104,6 @@ const EditListingDetailsFormComponent = props => (
       const submitInProgress = updateInProgress;
       const submitDisabled = invalid || disabled || submitInProgress;
 
-      const categoryConfig = findConfigForSelectFilter('category', filterConfig);
-      const categorySchemaType = categoryConfig.schemaType;
-      const categories = categoryConfig.options ? categoryConfig.options : [];
-      const categoryLabel = intl.formatMessage({
-        id: 'EditListingDetailsForm.categoryLabel',
-      });
-      const categoryPlaceholder = intl.formatMessage({
-        id: 'EditListingDetailsForm.categoryPlaceholder',
-      });
-
-      const categoryRequired = required(
-        intl.formatMessage({
-          id: 'EditListingDetailsForm.categoryRequired',
-        })
-      );
-
-      const sizeConfig = findConfigForSelectFilter('size', filterConfig);
-      const sizeSchemaType = sizeConfig ? sizeConfig.schemaType : null;
-      const sizes = sizeConfig && sizeConfig.options ? sizeConfig.options : [];
-      const sizeLabel = intl.formatMessage({
-        id: 'EditListingDetailsForm.sizeLabel',
-      });
-      const sizePlaceholder = intl.formatMessage({
-        id: 'EditListingDetailsForm.sizePlaceholder',
-      });
-
-      const sizeRequired = required(
-        intl.formatMessage({
-          id: 'EditListingDetailsForm.sizeRequired',
-        })
-      );
-
       const brandConfig = findConfigForSelectFilter('brand', filterConfig);
       const brandSchemaType = brandConfig ? brandConfig.schemaType : null;
       const brands = brandConfig && brandConfig.options ? brandConfig.options : [];
@@ -151,6 +119,7 @@ const EditListingDetailsFormComponent = props => (
           id: 'EditListingDetailsForm.brandRequired',
         })
       );
+
       const history = useHistory();
       const onClickContinueSession = () => {
         window.open(
@@ -178,28 +147,28 @@ const EditListingDetailsFormComponent = props => (
           {errorMessageUpdateListing}
           {errorMessageShowListing}
 
-          {props.initialValues.title ? (
-            <a onClick={onClickContinueSession}>Session has been created. Continue Here</a>
-          ) : (
-            <>
-              <SecondaryButton
-                inProgress={sessionCreating}
-                className={css.aiButton}
-                onClick={onClickCreateSession}
-              >
-                <FormattedMessage id="EditListingDetailsPanel.capture" />
-              </SecondaryButton>
-              <p className={css.error}>
-                You cannot continue without creating a session. Click the AI button
-              </p>
-            </>
-          )}
+          <div className={css.session}>
+            {props.initialValues.title ? (
+              <a onClick={onClickContinueSession}>Session has been created. Continue Here</a>
+            ) : (
+              <>
+                <SecondaryButton
+                  inProgress={sessionCreating}
+                  className={css.aiButton}
+                  onClick={onClickCreateSession}
+                >
+                  <FormattedMessage id="EditListingDetailsPanel.capture" />
+                </SecondaryButton>
+              </>
+            )}
 
-          {props.initialValues.title && !props.initialValues.vin ? (
-            <p className={css.error}>
-              Please refresh the page in a minute if you don't see the filled data
-            </p>
-          ) : null}
+            {props.initialValues.title && !props.initialValues.vin ? (
+              <p className={css.error}>
+                Please refresh the page in a minute if you don't see the filled data
+              </p>
+            ) : null}
+          </div>
+
           <FieldTextInput
             id="title"
             name="title"
@@ -228,9 +197,6 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('id')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('id')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
@@ -239,9 +205,6 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('vin')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('vin')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
@@ -250,9 +213,6 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('year')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('year')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
@@ -261,9 +221,6 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('make')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('make')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
@@ -272,20 +229,15 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('model')}
-            maxLength={TITLE_MAX_LENGTH}
             validate={composeValidators(required(requiredMessage('model')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
-            id="bodyType"
-            name="bodyType"
+            id="body_type"
+            name="body_type"
             className={css.title}
             type="text"
-            label={labelMessage('bodyType')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('bodyType')), maxLength60Message)}
-            autoFocus={autoFocus}
+            label={labelMessage('body_type')}
             disabled={true}
           />
           <FieldTextInput
@@ -294,9 +246,6 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('trim')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('trim')), maxLength60Message)}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
@@ -305,83 +254,55 @@ const EditListingDetailsFormComponent = props => (
             className={css.title}
             type="text"
             label={labelMessage('transmission')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(
-              required(requiredMessage('transmission')),
-              maxLength60Message
-            )}
-            autoFocus={autoFocus}
             disabled={true}
           />
           <FieldTextInput
-            id="engineType"
-            name="engineType"
+            id="engine_type"
+            name="engine_type"
             className={css.title}
             type="text"
-            label={labelMessage('engineType')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(
-              required(requiredMessage('engineType')),
-              maxLength60Message
-            )}
-            autoFocus={autoFocus}
+            label={labelMessage('engine_type')}
             disabled={true}
           />
           <FieldTextInput
-            id="fuelType"
-            name="fuelType"
+            id="fuel_type"
+            name="fuel_type"
             className={css.title}
             type="text"
-            label={labelMessage('fuelType')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('fuelType')), maxLength60Message)}
-            autoFocus={autoFocus}
+            label={labelMessage('fuel_type')}
             disabled={true}
           />
           <FieldTextInput
-            id="extCol"
-            name="extCol"
+            id="ext_col"
+            name="ext_col"
             className={css.title}
             type="text"
-            label={labelMessage('extCol')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('extCol')), maxLength60Message)}
-            autoFocus={autoFocus}
+            label={labelMessage('ext_col')}
             disabled={true}
           />
           <FieldTextInput
-            id="intCol"
-            name="intCol"
+            id="int_col"
+            name="int_col"
             className={css.title}
             type="text"
-            label={labelMessage('intCol')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('intCol')), maxLength60Message)}
-            autoFocus={autoFocus}
+            label={labelMessage('int_col')}
             disabled={true}
           />
           <FieldTextInput
-            id="odomReading"
-            name="odomReading"
+            id="odom_reading"
+            name="odom_reading"
             className={css.title}
             type="text"
-            label={labelMessage('odomReading')}
-            maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(
-              required(requiredMessage('odomReading')),
-              maxLength60Message
-            )}
-            autoFocus={autoFocus}
+            label={labelMessage('odom_reading')}
             disabled={true}
           />
           <FieldTextInput
-            id="odomUnit"
-            name="odomUnit"
+            id="odom_unit"
+            name="odom_unit"
             className={css.title}
             type="text"
-            label={labelMessage('odomUnit')}
+            label={labelMessage('odom_unit')}
             maxLength={TITLE_MAX_LENGTH}
-            validate={composeValidators(required(requiredMessage('odomUnit')), maxLength60Message)}
             autoFocus={autoFocus}
             disabled={true}
           />
@@ -395,7 +316,6 @@ const EditListingDetailsFormComponent = props => (
             schemaType={brandSchemaType}
             disabled={true}
           />
-
           <Button
             className={css.submitButton}
             type="submit"

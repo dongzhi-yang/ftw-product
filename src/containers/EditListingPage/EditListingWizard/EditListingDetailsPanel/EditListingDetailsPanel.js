@@ -49,21 +49,22 @@ const EditListingDetailsPanel = props => {
       <EditListingDetailsForm
         className={css.form}
         initialValues={{
+          ...publicData.vehicle,
           title,
           description,
-          category: publicData.category,
-          size: publicData.size,
           brand: publicData.brand,
         }}
         saveActionMsg={submitButtonText}
         onSubmit={values => {
-          const { title, description, category, size, brand } = values;
+          const { title, description, brand, ...rest } = values;
           const updateValues = {
             title: title.trim(),
             description,
-            publicData: { category, size, brand },
+            publicData: {
+              brand,
+              vehicle: rest,
+            },
           };
-
           onSubmit(updateValues);
         }}
         onChange={onChange}

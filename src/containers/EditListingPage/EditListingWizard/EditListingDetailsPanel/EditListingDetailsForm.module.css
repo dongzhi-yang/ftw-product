@@ -55,3 +55,7 @@
 .aiButton:hover {
   border-color: rebeccapurple;
 }
+
+.session {
+  margin-bottom: 36px;
+}
