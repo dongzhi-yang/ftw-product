@@ -5,7 +5,6 @@ const { UUID } = types;
 module.exports = (req, res) => {
   if (req.body.session && req.body.session.status && req.body.session.status === 'COMPLETE') {
     let getResult = req.body.session;
-    let photos = req.body.photos;
     let findKey = getResult.session_key;
     integrationSdk.listings
       .query({ keywords: findKey.slice(4) })
@@ -20,7 +19,7 @@ module.exports = (req, res) => {
             // brand: getResult.vehicle && getResult.vehicle.make,
             title: `${getResult.vehicle.year} ${getResult.vehicle.make} ${getResult.vehicle.model}`,
             description: Object.values(getResult.vehicle).join(', '),
-            publicData: { ...req.body, ...getResult, brand: getResult.vehicle.make },
+            publicData: { ...getResult.vehicle, pave: req.body, brand: getResult.vehicle.make },
           };
           integrationSdk.listings
             .update(updateObj)

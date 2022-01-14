@@ -7,8 +7,7 @@ import css from './ListingPage.module.css';
 const SectionDetailsMaybe = props => {
   const { publicData, customConfig } = props;
   const { listing, filters } = customConfig || {};
-
-  const { vehicle } = publicData;
+  const vehicle = publicData.pave?.vehicle;
   const skipFields = ['id'];
 
   if (!publicData || !customConfig || !listing?.enumFieldDetails) {
@@ -31,7 +30,7 @@ const SectionDetailsMaybe = props => {
   const existingExtendedData = listing?.enumFieldDetails.reduce(pickExtendedData(filters), []);
 
   const openReport = () => {
-    window.open(publicData.condition_report, '_blank');
+    window.open(publicData.pave.condition_report, '_blank');
   };
   return existingExtendedData ? (
     <div className={css.sectionDetails}>
@@ -59,7 +58,7 @@ const SectionDetailsMaybe = props => {
           }
         })}
 
-        {publicData.condition_report ? (
+        {publicData.pave?.condition_report ? (
           <SecondaryButton className={css.reportButton} onClick={openReport}>
             View Condition Report
           </SecondaryButton>

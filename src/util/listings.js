@@ -47,7 +47,7 @@ export const getModifiedListings = listings => {
 };
 
 export const modifyListing = listing => {
-  const modifiedImages = getImageVariants(listing.attributes.publicData.photos);
+  const modifiedImages = getImageVariants(listing);
   const modifiedListing = {
     ...listing,
     relationships: {
@@ -59,7 +59,7 @@ export const modifyListing = listing => {
     },
     attributes: {
       ...listing.attributes,
-      title: listing.attributes.title || getTitle(listing.attributes.publicData?.vehicle),
+      title: listing.attributes.title || getTitle(listing.attributes.publicData?.pave?.vehicle),
       publicData: {
         ...listing.attributes.publicData,
         // brand: getBrand(listing.attributes.publicData?.vehicle),
@@ -73,9 +73,8 @@ export const getTitle = vehicle => {
   return `${vehicle?.year || ''} ${vehicle?.make || ''} ${vehicle?.model || ''}`.trim();
 };
 
-export const getImageVariants = images => {
-  if (!images) return [];
-  return images.map(image => ({
+export const getImageVariants = listing => {
+  return (listing.attributes.publicData?.pave?.photos || []).map(image => ({
     ...image,
     type: 'image',
     id: new UUID(image.url),

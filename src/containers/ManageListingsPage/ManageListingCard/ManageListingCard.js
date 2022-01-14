@@ -144,7 +144,7 @@ export const ManageListingCardComponent = props => {
   let firstImage =
     currentListing.images && currentListing.images.length > 0 ? currentListing.images[0] : null;
 
-  firstImage = getImageVariants(currentListing.attributes.publicData.photos)[0];
+  firstImage = getImageVariants(currentListing)[0];
 
   const menuItemClasses = classNames(css.menuItem, {
     [css.menuItemDisabled]: !!actionsInProgressListingId,

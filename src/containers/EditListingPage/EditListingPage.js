@@ -192,7 +192,7 @@ export const EditListingPageComponent = props => {
       removedImageIds
     );
 
-    images = getImageVariants(currentListing.attributes.publicData.photos);
+    images = getImageVariants(currentListing);
 
     const title = isNewListingFlow
       ? intl.formatMessage({ id: 'EditListingPage.titleCreateListing' })
