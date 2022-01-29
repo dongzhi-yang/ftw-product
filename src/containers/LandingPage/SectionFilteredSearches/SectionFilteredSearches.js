@@ -65,12 +65,12 @@ const SectionFilteredSearches = props => {
         <FormattedMessage id="SectionFilteredSearches.title" />
       </div>
       <div className={css.filteredSearches}>
-        <FilterLink name="BMW" image={bmw} link="http://localhost:3000/s?pub_brand=bmw" />
-        <FilterLink name="Ford" image={ford} link="http://localhost:3000/s?pub_brand=ford" />
+        <FilterLink name="BMW" image={bmw} link="http://localhost:3000/s?pub_brand=BMW" />
+        <FilterLink name="Ford" image={ford} link="http://localhost:3000/s?pub_brand=Ford" />
         <FilterLink
           name="Volkswagen"
           image={volkswagen}
-          link="http://localhost:3000/s?pub_brand=volkswagen"
+          link="http://localhost:3000/s?pub_brand=Volkswagen"
         />
       </div>
     </div>
