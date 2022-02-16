@@ -4,10 +4,12 @@
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: var(--matterColorNegative);
+  border-bottom: 20px solid #333;
 
   width: 100%;
   padding: 24px 24px 42px 24px;
-  background-color: var(--matterColorBright);
+  /* background-color: var(--matterColorBright); */
+  background-color: #535b5c;
   position: relative;
 
   @media (--viewportMedium) {
@@ -56,6 +58,17 @@
   }
 }
 
+.someLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
 /* Mobile only social media links */
 .someLiksMobile {
   margin-bottom: 24px;
@@ -102,10 +115,12 @@
     order: 1;
     margin-right: 12px;
   }
+
   @media (--viewportLarge) {
     flex-basis: 240px;
     margin-right: 57px;
   }
+
   @media (--viewportLargeWithPaddings) {
     flex-basis: 250px;
     margin-right: 12px;
@@ -124,8 +139,7 @@
   height: 27px;
 }
 
-.organizationInfo {
-}
+.organizationInfo {}
 
 .organizationDescription,
 .organizationCopyright {
@@ -235,6 +249,7 @@
     flex-direction: column;
     margin-right: 12px;
   }
+
   @media (--viewportLarge) {
     margin-right: 0;
   }

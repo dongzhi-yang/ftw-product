@@ -1,8 +1,7 @@
 @import '../../styles/customMediaQueries.css';
 @import '../../styles/propertySets.css';
 
-.root {
-}
+.root {}
 
 /* heroContainer gives the height for SectionHero */
 /* Safari has a bug with vw padding inside flexbox. Therefore we need an extra div (container) */
@@ -38,17 +37,17 @@
 
 .hero {
   flex-grow: 1;
-  justify-content: flex-end;
-  padding-bottom: 32px;
+  /* justify-content: flex-end; */
+  padding-top: 32px;
 
-  @media (--viewportMedium) {
+  /* @media (--viewportMedium) {
     padding-bottom: 83px;
-  }
+  } */
 
-  @media (--viewportLarge) {
-    justify-content: center;
-    padding-top: 60px;
-  }
+  /* @media (--viewportLarge) { */
+  /* justify-content: center; */
+  /* padding-top: 60px; */
+  /* } */
 }
 
 .sections {
@@ -70,6 +69,7 @@
 /* Every other section has a light background */
 .section:nth-of-type(2n) {
   background-color: var(--matterColorLight);
+
   @media (--viewportMedium) {
     border-radius: 4px;
   }
@@ -98,27 +98,4 @@
 .sectionContentFirstChild {
   composes: sectionContent;
   margin-top: 3vh;
-}
-
-/* A bar on top of light sections */
-.section:nth-of-type(2n) .sectionContent::before {
-  background: var(--marketplaceColor);
-  content: '';
-  display: block;
-  width: 109px;
-  height: 6px;
-
-  /* Place the bar on top of .sectionContent top margin */
-  position: relative;
-  top: calc(-1 * var(--LandingPage_sectionMarginTop));
-
-  @media (--viewportMedium) {
-    width: 192px;
-    height: 8px;
-    top: calc(-1 * var(--LandingPage_sectionMarginTopMedium));
-  }
-
-  @media (--viewportLarge) {
-    top: calc(-1 * var(--LandingPage_sectionMarginTopLarge));
-  }
 }

@@ -34,6 +34,17 @@ import * as log from './util/log';
 import { LoggingAnalyticsHandler, GoogleAnalyticsHandler } from './analytics/handlers';
 
 import './styles/marketplaceDefaults.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faTableList,
+  faLaptop,
+  faScrewdriverWrench,
+  faTruck,
+  faTags,
+  faMoneyCheckDollar,
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(faTableList, faLaptop, faScrewdriverWrench, faTruck, faTags, faMoneyCheckDollar);
 
 const render = (store, shouldHydrate) => {
   // If the server already loaded the auth information, render the app

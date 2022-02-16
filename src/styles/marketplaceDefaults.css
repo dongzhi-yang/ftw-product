@@ -19,8 +19,10 @@
 
   /*--marketplaceColor: #5d2bc0; /* hsl(260, 63%, 46%) */
   --marketplaceColor: rebeccapurple;
-  --marketplaceColorLight: #7748d5; /* hsl(260, 63%, 56%), +10L from marketplaceColor */
-  --marketplaceColorDark: #34196c; /* hsl(260, 63%, 26%), -20L from marketplaceColor */
+  --marketplaceColorLight: #7748d5;
+  /* hsl(260, 63%, 56%), +10L from marketplaceColor */
+  --marketplaceColorDark: #34196c;
+  /* hsl(260, 63%, 26%), -20L from marketplaceColor */
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23a02cbf;
@@ -45,7 +47,7 @@
   --matterColorLightTransparent: rgba(255, 255, 255, 0.65);
 
   /* ================ Font ================ */
-  --fontFamily: 'poppins', Helvetica, Arial, sans-serif;
+  --fontFamily: 'kanit', Helvetica, Arial, sans-serif;
 
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
@@ -159,20 +161,24 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
-  -moz-osx-font-smoothing: grayscale; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
+  -webkit-font-smoothing: antialiased;
+  /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
+  -moz-osx-font-smoothing: grayscale;
+  /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
   text-rendering: optimizeSpeed;
 
   background-color: var(--matterColorBright);
 }
 
 ::selection {
-  background: var(--marketplaceColor); /* WebKit/Blink Browsers */
+  background: var(--marketplaceColor);
+  /* WebKit/Blink Browsers */
   color: var(--matterColorLight);
 }
 
 ::-moz-selection {
-  background: var(--marketplaceColor); /* Gecko Browsers */
+  background: var(--marketplaceColor);
+  /* Gecko Browsers */
   color: var(--matterColorLight);
 }
 
@@ -183,18 +189,23 @@ a {
 h1 {
   @apply --marketplaceH1FontStyles;
 }
+
 h2 {
   @apply --marketplaceH2FontStyles;
 }
+
 h3 {
   @apply --marketplaceH3FontStyles;
 }
+
 h4 {
   @apply --marketplaceH4FontStyles;
 }
+
 h5 {
   @apply --marketplaceH5FontStyles;
 }
+
 h6 {
   @apply --marketplaceH6FontStyles;
 }
@@ -276,9 +287,10 @@ textarea {
 
 .fontsLoaded {
   & body {
-    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-family: 'kanit', Helvetica, Arial, sans-serif;
   }
+
   & button {
-    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-family: 'kanit', Helvetica, Arial, sans-serif;
   }
 }

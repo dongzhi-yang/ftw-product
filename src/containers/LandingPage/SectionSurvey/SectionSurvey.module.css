@@ -1,0 +1,52 @@
+@import '../../../styles/propertySets.css';
+
+.surveySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.surveyTitle {
+  max-width: 850px;
+  text-align: center;
+  padding-top: 20px;
+  color: #e3582d;
+  letter-spacing: 3px;
+  line-height: 1.4em;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.surveyQuotes {
+
+  /* display: flex; */
+  @media (--viewportMedium) {
+    display: flex;
+  }
+
+}
+
+.surveyQuote {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lato';
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  text-align: center;
+  color: #666666;
+}
+
+.surveyQuote:not(:last-child) {
+  @media (--viewportMedium) {
+    padding-right: 20px;
+  }
+}
+
+.quoteImage {
+  width: 30px;
+  padding: 20px 0px;
+}

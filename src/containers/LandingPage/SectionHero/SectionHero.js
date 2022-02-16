@@ -3,7 +3,6 @@ import { string } from 'prop-types';
 import classNames from 'classnames';
 
 import { FormattedMessage } from '../../../util/reactIntl';
-import { NamedLink } from '../../../components';
 
 import css from './SectionHero.module.css';
 
@@ -18,12 +17,6 @@ const SectionHero = props => {
         <h1 className={css.heroMainTitle}>
           <FormattedMessage id="SectionHero.title" />
         </h1>
-        <h2 className={css.heroSubTitle}>
-          <FormattedMessage id="SectionHero.subTitle" />
-        </h2>
-        <NamedLink name="SearchPage" className={css.heroButton}>
-          <FormattedMessage id="SectionHero.browseButton" />
-        </NamedLink>
       </div>
     </div>
   );

@@ -22,11 +22,11 @@
   /* Full screen Background image located in root-folder/src/assets */
   --backgroundImage: {
     /* Gradient direction and overlaying the black color on top of the image for better readability */
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-      url('../../assets/background-1440.jpg');
+    background: linear-gradient(180deg, rgba(27, 31, 37, 0) 35%, rgba(35, 171, 226, 0.75) 100%),
+      url('../../assets/hero.jpg');
 
     /* Add loading color for the div */
-    background-color: var(--matterColor);
+    /* background-color: var(--matterColor); */
 
     /* Cover the whole screen with the background image */
     background-size: cover;
@@ -34,10 +34,10 @@
     /* Align the image within the container */
     background-position: center center;
 
-    @media (--viewportLarge) {
+    /* @media (--viewportLarge) {
       border-radius: 40px;
       border: solid 36px var(--matterColorBright);
-    }
+    } */
   }
 
   /**
@@ -401,6 +401,7 @@
       /* TODO: Make sure button text aligns with the baseline */
     }
   }
+
   --marketplaceButtonStyles {
     @apply --marketplaceButtonFontStyles;
 
@@ -441,6 +442,7 @@
       text-decoration: none;
       box-shadow: var(--boxShadowButton);
     }
+
     &:disabled {
       background-color: var(--matterColorNegative);
       color: var(--matterColorLight);
@@ -452,6 +454,7 @@
       min-height: 65px;
     }
   }
+
   --marketplaceButtonStylesPrimary {
     @apply --marketplaceButtonStyles;
 
@@ -462,11 +465,13 @@
     &:focus {
       background-color: var(--successColorDark);
     }
+
     &:disabled {
       background-color: var(--matterColorNegative);
       color: var(--matterColor);
     }
   }
+
   --marketplaceButtonStylesSecondary {
     @apply --marketplaceButtonStyles;
 
@@ -486,6 +491,7 @@
       background-color: var(--matterColorLight);
       border-color: var(--matterColorAnti);
     }
+
     &:disabled {
       background-color: var(--matterColorNegative);
       color: var(--matterColorLight);
@@ -774,10 +780,12 @@
       box-shadow: none;
       text-decoration: none;
     }
+
     &:enabled:active {
       background-color: transparent;
       color: var(--matterColorDark);
     }
+
     &:disabled {
       background-color: transparent;
     }

@@ -1,0 +1,122 @@
+@import '../../../styles/propertySets.css';
+
+.blocks {
+  @media (--viewportMedium) {
+    display: flex;
+  }
+}
+
+.blocks * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.contact {
+  background-image: linear-gradient(180deg, rgba(35, 171, 226, 0.43) 0%, rgba(0, 0, 0, 0.66) 100%), url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/suv-on-mountain.jpg);
+  background-size: cover;
+  color: #ffffff;
+  padding: 150px 10px 20px;
+
+  @media (--viewportMedium) {
+    padding-top: 50px;
+    padding-bottom: 400px;
+  }
+
+}
+
+.contact h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1em;
+}
+
+.contactContainer {
+  @media (--viewportMedium) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin: 10px 0px;
+}
+
+.contactLocation {
+  margin-top: 60px;
+}
+
+.contactLocation h3 {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.contactLocation p {
+  font-family: 'Lato';
+  font-size: 18px;
+  margin: 0;
+}
+
+
+.send {
+  background-color: #23abe2;
+  color: #ffffff;
+  padding: 50px 0px;
+
+  @media (--viewportMedium) {
+    padding: 0px 30px;
+  }
+}
+
+.sendTitle {
+  font-weight: 700;
+  font-size: 32px;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+
+  @media (--viewportMedium) {
+    padding-top: 50px;
+  }
+}
+
+.sendInputs input,
+.sendInputs textarea {
+  color: #ffffff;
+  font-family: 'Lato';
+  font-weight: 400;
+  width: 100%;
+  border-width: 0;
+  border-radius: 0;
+  color: #999;
+  font-size: 14px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 0;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.sendInputs input::placeholder,
+.sendInputs textarea::placeholder {
+  color: #ffffff;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.sendInputs button {
+  border: none;
+  background-color: #ffffff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 10px 20px;
+  margin-top: 20px;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  font-weight: 600;
+}

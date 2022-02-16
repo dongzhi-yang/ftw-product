@@ -22,8 +22,11 @@ import facebookImage from '../../assets/sneakertimeFacebook-1200x630.jpg';
 import twitterImage from '../../assets/sneakertimeTwitter-600x314.jpg';
 
 import SectionHero from './SectionHero/SectionHero';
-import SectionHowItWorks from './SectionHowItWorks/SectionHowItWorks';
-import SectionFilteredSearches from './SectionFilteredSearches/SectionFilteredSearches';
+import SectionSurvey from './SectionSurvey/SectionSurvey';
+import SectionPartners from './SectionPartners/SectionPartners';
+import SectionFeatures from './SectionFeatures/SectionFeatures';
+import SectionHeroActions from './SectionHeroActions/SectionHeroActions';
+import SectionContact from './SectionContact/SectionContact';
 import css from './LandingPage.module.css';
 
 export const LandingPageComponent = props => {
@@ -71,14 +74,21 @@ export const LandingPageComponent = props => {
           </div>
           <ul className={css.sections}>
             <li className={css.section}>
-              <div className={css.sectionContentFirstChild}>
-                <SectionFilteredSearches />
-              </div>
+              <SectionHeroActions sectionClass={css.sectionContent}></SectionHeroActions>
+            </li>
+            <li className={css.section}>
+              <SectionFeatures sectionClass={css.sectionContent}></SectionFeatures>
+            </li>
+            <li className={css.section}>
+              <SectionPartners sectionClass={css.sectionContent}></SectionPartners>
             </li>
             <li className={css.section}>
               <div className={css.sectionContent}>
-                <SectionHowItWorks />
+                <SectionSurvey></SectionSurvey>
               </div>
+            </li>
+            <li className={css.section}>
+              <SectionContact sectionClass={css.sectionContent}></SectionContact>
             </li>
           </ul>
         </LayoutWrapperMain>
