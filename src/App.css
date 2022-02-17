@@ -1,0 +1,589 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body{
+  font-family: 'Lato', sans-serif !important;
+}
+
+
+
+
+
+
+
+
+
+
+.topnav {
+  background-color: #535B5C;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+span.logo-color {
+  color: #23abe2;
+}
+
+.me-auto.navbar-nav a {
+  padding: 0px 18px !important;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+img.logo-img {
+  width: 142px;
+}
+
+.bg-gray {
+  background: #535B5C;
+}
+
+.topnav a:hover {
+  color: #ffffffb8 !important;
+}
+.topnav a {
+  padding: 0px 11px !important;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text]::placeholder {
+  color: #535B5C;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #535B5C;
+  max-width: 154px;
+}
+a.sign-btn {
+  color: #fff;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 16px;
+  margin-top: 5px;
+  margin-right: 16px;
+  background: #25a7dc;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.mbl-logo-img {
+  width: 28px !important;
+  height: 26px;
+  object-fit: contain;
+}
+
+.dropdown-menu
+{
+  background-color: none;
+}
+footer {
+  background-color: #535B5C;
+}
+footer img {
+  max-width: 140px;
+}
+p.logo-text {
+  margin-bottom: 0;
+  color: #fefefe;
+}
+footer h5 {
+  font-size: 16px;
+}
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 140px;
+}
+footer ul li {
+  margin-bottom: 4px;
+}
+
+footer a,footer a:hover {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+.social-icons i {
+  background-color: #25a7dc;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  color:#535B5C;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100px;
+}
+
+@media(max-width:767px)
+{
+
+  footer .row>* {
+    width: initial !important;
+    padding: 15px;
+}
+
+  .hide-mbl, .pc-logo-img {
+    display: none !important;
+}
+.topnav input[type=text] {
+  padding: 3px;
+  font-size: 12px;
+  max-width: none;
+  position: relative;
+  top: -3px;
+}
+.topnav .search-container button {
+  padding: 3px 16px;
+  margin-top: 0px;
+  font-size: 12px;
+}
+
+.topnav {
+  min-height: 50px;
+  height: 50px;
+}
+.nav-sec {
+  order: 3;
+}
+.topnav {
+  justify-content: space-evenly;
+}
+.search-container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-container {
+  width: 70%;
+}
+.logo-sec {
+  width: 15%;
+  text-align: center;
+}
+.nav-sec {
+  width: 15%;
+}
+.navbar-toggler:focus, .navbar-toggler, .navbar-toggler:hover {
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+div#navbarScroll {
+  position: absolute;
+  top: 48px;
+  background-color: #535b5c;
+  right: 24px;
+  border-top: 2px solid #25a7dc;
+  min-width: 294px;
+  z-index: 99;
+  height: 152px;
+  overflow: unset !important;
+}
+
+.nav-main.navbar-nav.navbar-nav-scroll {
+  padding-top: 14px;
+  min-height: 290px;
+  padding-left: 6px;
+}
+
+body span.navbar-toggler-icon {
+  background: none !important;
+}
+body span.navbar-toggler-icon:after {
+  content: "\f0c9";
+  font-family: 'FontAwesome';
+  color: #25a7dc;
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+}
+
+.close-menu:after {
+  content: "\f00d" !important;
+}
+.fifth-sec img.third-inner-img {
+  width: 80%;
+}
+
+
+.second-inner .container {
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 50% 100%, 50% 100%, 0% 80%, 0 0);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0% 90%, 0 0) !important;
+  padding: 40px 0px;
+}
+
+
+.third-sec {
+  -webkit-clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0) !important;
+  clip-path: polygon(50% 6%, 100% -4%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% -4%) !important;
+  padding-top: 99px !important;
+  background-position: top;
+}
+
+.fourth-sec {
+  -webkit-clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0) !important;
+  clip-path: polygon(50% 10%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0) !important;
+  margin-top: -32px !important;
+}
+
+.fourth-inner-sec:first-child {
+  margin-bottom: 31px;
+}
+.big-quote h3 {
+
+  width: 100% !important;
+
+}
+.fifth-sec .col-12 img.third-inner-img {
+  width: 25px;
+}
+.third-inner .col-12 h3 {
+  font-weight: 800;
+}
+.main-banner h1 {
+  top: 35px !important;
+  font-size: 28px !important;
+  letter-spacing: 2px !important;
+  line-height: 40px !important;
+  width: 95% !important;
+ 
+}
+.main-banner img {
+
+  height: 350px !important;
+}
+.third-inner .col-12 img {
+  margin-bottom: 20px;
+}
+.third-inner .col-12 {
+  margin-bottom: 40px;
+}
+.third-inner h1 {
+  font-size: 35px !important;
+}
+.third-inner {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.contact-form, .get-in-touch {
+  padding-top: 50px !important;
+  
+  padding-bottom: 60px !important;
+}
+footer .row>* {
+  width: initial !important;
+  padding: 15px;
+}
+.social-icons {
+  margin-bottom: 24px;
+}
+
+}
+
+
+@media(min-width:768px)
+{
+  .topnav .dropdown-menu a:hover {
+    background: none;
+}
+.social-icons {
+
+  height: 120px;
+
+}
+
+.topnav .dropdown-menu {
+    top: 45px !important;
+    border-radius: 0;
+    background-color: #535b5c;
+    border-top: 2px solid #25a7dc !important;
+    border: 0;
+}
+
+  .bg-gray {
+    height: 70px;
+  }
+  .hide-pc, .mbl-logo-img {
+    display: none !important;
+}
+.pc-logo-img {
+  position: absolute;
+  left: 20px;
+  top: 26px;
+}
+}
+
+
+.second-inner .inner-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+.second-inner .btn {
+  padding: 9px 41px;
+  border-radius: 0;
+  background-color: #25a7dc;
+  border: 0;
+}
+img.inner-img {
+  filter: invert(1);
+  display: block;
+  margin: 25px 0px;
+}
+a.navbar-brand {
+  position: absolute;
+  left: 0;
+}
+
+.flex-end {
+  justify-content: end !important;
+}
+.second-inner .inner-sec p {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 82px;
+}
+.main-banner h1 {
+  position: absolute;
+  top: 58px;
+  font-weight: 500;
+  font-size: 52px;
+  color: #964026!important;
+  letter-spacing: 3px;
+  line-height: 64px;
+  text-shadow: 0.06em 0.07em 0.08em RGBA(255,255,255,0);
+  width: 80%;
+  font-weight: 900;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.main-banner img {
+  width: 100%;
+  object-fit: cover;
+  height: 581px;
+}
+
+.main-banner  {
+position: relative;
+}
+
+.second-inner .container {
+  background-image: linear-gradient(90deg,rgba(0,0,0,0) 50%,rgba(0,0,0,0.23) 50%)!important;
+  background-color: #2d2d2d;
+  min-height: 450px;
+  color: #fff;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 50% 100%, 50% 100%, 0% 80%, 0 0);
+  max-width: 1280px;
+}
+.second-inner .container .row {
+  margin: 0;
+}
+
+
+.third-inner {
+  min-height: 565px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-heading h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.main-heading {
+  margin-bottom: 35px;
+}
+
+.third-inner-sec h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.third-inner-sec img {
+  margin-bottom: 18px;
+}
+.third-inner-sec {
+  text-align: center;
+}
+
+.third-inner-sec {
+  margin-bottom: 50px;
+}
+
+.third-sec {
+  background-image: linear-gradient(180deg,rgba(255,255,255,0.8) 40%,rgba(255,255,255,0.72) 100%),
+  url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/blurry-car-copy.jpg)!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0);
+  padding-top: 105px;
+  position: relative;
+}
+
+
+.third-sec:after {
+  content: "";
+  height: 85px;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 0%, 0 100%, 0% 60%, 0 0);
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+.fourth-sec {
+  -webkit-clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0);
+  clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0);
+  margin-top: 33px;
+  background-color: #95979a;
+  color: #fff;
+  text-align: center;
+  min-height: 454px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 170px;
+  padding-bottom: 80px;
+}
+
+.fourth-sec .fourth-inner-sec {
+  padding: 30px 50px;
+}
+
+.fourth-sec .fourth-inner-sec h3 {
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+.fifth-sec {
+  padding: 60px 0px;
+  text-align: center;
+}
+.fifth-inner-sec p {
+  line-height: 31px;
+  margin-top: 19px;
+  color: #7f7f7f;
+}
+.big-quote {
+  margin-bottom: 48px;
+}
+.big-quote h3 {
+  font-size: 22px;
+  color: #e3582d!important;
+  letter-spacing: 3px;
+  line-height: 1.4em;
+  font-weight: 700;
+  width: 86%;
+  margin: 0 auto;
+}
+
+
+
+
+
+.sixth-sec {
+  color: #fff;
+}
+.sixth-sec p {
+  font-size: 20px;
+}
+.sixth-sec h3 {
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.sixth-sec h2 {
+  font-size: 27px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+.sixth-sec h1 {
+  font-weight: 800;
+  margin: 0;
+}
+.get-in-touch {
+  background-image: linear-gradient(180deg,rgba(35,171,226,0.43) 0%,rgba(0,0,0,0.66) 100%),
+  url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/suv-on-mountain.jpg);
+  background-color: initial;
+  padding-top: 150px;
+  padding-right: 60px !important;
+  padding-bottom: 150px;
+  padding-left: 10% !important;
+  background-position: center;
+}
+
+.contact-form {
+  background-color: #23abe2;
+  padding-top: 150px;
+  padding-right: 10% !important;
+  padding-bottom: 150px;
+  padding-left: 60px !important;
+}
+
+h2.contact_main_title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.contact-form form input::placeholder, .contact-form form textarea::placeholder {
+  color: #fff;
+  font-size: 15px;
+}
+.contact-form form input, .contact-form form textarea {
+  background-color: rgba(0,0,0,0.15);
+  border: 0;
+  color: #fff;
+  width: 100%;
+  padding: 4px 4px 10px 18px;
+}
+
+button.contact_submit {
+  color: #000000!important;
+  border-color: #ffffff;
+  border-radius: 0px;
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: 600!important;
+  text-transform: uppercase!important;
+  background-color: #ffffff!important;
+  margin-top: 8px!important;
+  border: 0;
+  padding: 13px 20px;
+}
