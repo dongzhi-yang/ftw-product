@@ -9,8 +9,14 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
+	
   const schemaImage = `${config.canonicalRootURL}`;
-  return <div className='topnav'>    <>
+ 
+  
+  return <div className='topnav'>  
+
+
+  <>
 <div className='logo-sec'>
     <img 
     className="logo-img pc-logo-img"
@@ -28,22 +34,20 @@ export default function Header() {
 <div className="nav-sec">
 <Navbar bg="gray" expand="lg">
   <Container fluid>
-    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Toggle aria-controls="navbarScroll"/>
     <Navbar.Collapse id="navbarScroll">   
       <Nav
         className="nav-main"
-        style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Sell</Nav.Link>
-        <Nav.Link href="#action2">Buy</Nav.Link>
+        <Nav.Link href="/l/new">Sell</Nav.Link>
+        <Nav.Link href="/l/new">Buy</Nav.Link>
         <NavDropdown title="About E-Motive" id="navbarScrollingDropdown" className='logo-letter'>
           <NavDropdown.Item href="#action3">How It Works</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="#" disabled>
+        <Nav.Link href="/login">
         Sign In / Sign Up
         </Nav.Link>
-        <Nav.Link className='hide-pc' href="#action2">Link</Nav.Link>
 
       </Nav>
     </Navbar.Collapse>
@@ -62,10 +66,12 @@ export default function Header() {
  </div>
 
  <Nav>
-        <Nav.Link className="hide-mbl" href="#action1">Sign In / Sign Up</Nav.Link>
+        <Nav.Link className="hide-mbl" href="/login">Sign In / Sign Up</Nav.Link>
   
       </Nav>
 
           </>
-  </div>;
+
+  </div>;  
 }
+

@@ -10,6 +10,7 @@ import img3 from '../../../assets/807303.png';
 import img4 from '../../../assets/1670915.png';
 import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
+//import backgroundimg from '../../../assets/qublurry-car-copyote.png';
 import config from '../../../config';
 
 export default function Content()
@@ -61,7 +62,7 @@ export default function Content()
   <div className="main-heading"><h1><span className="logo-color">E</span>-Motive Delivers…</h1></div>
   <Container>
     <Row>  
-    <Col className="third-inner-sec" xs={12} lg={6}>
+    <Col className="third-inner-sec" xs={12} lg={6} md={6}>
 <img
         className="third-inner-img"
         src={img1}
@@ -69,7 +70,7 @@ export default function Content()
     />
  <h3> Real-time Condition Reports</h3>
   </Col>
-  <Col className="third-inner-sec" xs={12} lg={6}>
+  <Col className="third-inner-sec" xs={12} lg={6} md={6}>
 <img
         className="third-inner-img"
         src={img2}
@@ -79,7 +80,7 @@ export default function Content()
   </Col>
 </Row>
 <Row>  
-    <Col className="third-inner-sec" xs={12} lg={6}>
+    <Col className="third-inner-sec" xs={12} lg={6} md={6}>
 <img
         className="third-inner-img"
         src={img3}
@@ -87,7 +88,7 @@ export default function Content()
     />
  <h3>Professional Inspections</h3>
   </Col>
-  <Col className="third-inner-sec" xs={12} lg={6}>
+  <Col className="third-inner-sec" xs={12} lg={6} md={6}>
 <img
         className="third-inner-img"
         src={img4}
@@ -188,14 +189,14 @@ export default function Content()
   <Container fluid>
 
     <Row>  
-    <Col xs={12} lg={6} className="sixth-inner-sec get-in-touch col-6">
+    <Col xs={12} lg={6} md={6} className="sixth-inner-sec get-in-touch col-6">
     <h1>Get In Touch</h1>
     <h2>(888) 123-4562</h2>
 <h3>Location</h3>
 <p>2345 Divi St<br></br>
 San Francisco, CA 94222</p>
   </Col>
-  <Col xs={12} lg={6} className="sixth-inner-sec contact-form col-6">
+  <Col xs={12} lg={6} md={6} className="sixth-inner-sec contact-form col-6">
 
  
 				
