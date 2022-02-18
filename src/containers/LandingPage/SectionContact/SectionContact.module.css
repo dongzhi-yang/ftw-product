@@ -6,8 +6,8 @@
   clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%, 0 0);
 
   @media (--viewportMedium) {
-    -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%, 0 0);
-    clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 50% 100%, 0 90%, 0 0)
+    -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 50% 100%, 0 85%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 50% 100%, 0 85%, 0 0)
   }
 }
 
@@ -25,13 +25,13 @@
 .contact {
   background-image: linear-gradient(180deg, rgba(35, 171, 226, 0.43) 0%, rgba(0, 0, 0, 0.66) 100%), url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/suv-on-mountain.jpg);
   background-size: cover;
+  background-position: 50%;
   color: #ffffff;
   padding: 150px 10px 20px;
 
   @media (--viewportMedium) {
-    padding: 50px 0px 50px;
+    padding: 40px 0px 250px;
   }
-
 }
 
 .contact h1 {
@@ -39,13 +39,14 @@
   font-weight: 500;
   margin: 0;
   line-height: 1em;
+  letter-spacing: 1px;
 }
 
 .contactContainer {
   @media (--viewportMedium) {
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
+    margin-left: 20%;
   }
 }
 
@@ -55,12 +56,12 @@
 }
 
 .contactLocation {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .contactLocation h3 {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 3px;
 }
 
@@ -77,12 +78,13 @@
   padding: 50px 20px;
 
   @media (--viewportMedium) {
-    padding: 0px 30px;
+    padding: 0px;
   }
 }
 
 .sendContainer {
   @media (--viewportMedium) {
+    padding-left: 20px;
     margin-right: 15%;
   }
 }
