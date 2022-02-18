@@ -24,12 +24,14 @@ const SectionContact = props => {
         </div>
         <div className={css.send}>
           <div className={props.sectionClass}>
-            <h1 className={css.sendTitle}>Send a Message</h1>
-            <div className={css.sendInputs}>
-              <input type="text" placeholder="Name"></input>
-              <input type="email" placeholder="Email Address"></input>
-              <textarea placeholder="Message"></textarea>
-              <button type="submit">Send message</button>
+            <div className={css.sendContainer}>
+              <h1 className={css.sendTitle}>Send a Message</h1>
+              <div className={css.sendInputs}>
+                <input type="text" placeholder="Name"></input>
+                <input type="email" placeholder="Email Address"></input>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send message</button>
+              </div>
             </div>
           </div>
         </div>

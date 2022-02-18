@@ -13,7 +13,7 @@ const SectionSurvey = props => {
         src="https://i0.wp.com/box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/SurveyMonkey-Logo-1.png?resize=400%2C60"
         alt="SurveyMonkey"
         title="SurveyMonkey-Logo"
-        srcset="https://i0.wp.com/box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/SurveyMonkey-Logo-1.png?w=400 400w, https://i0.wp.com/box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/SurveyMonkey-Logo-1.png?resize=300%2C45 300w"
+        srcSet="https://i0.wp.com/box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/SurveyMonkey-Logo-1.png?w=400 400w, https://i0.wp.com/box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/SurveyMonkey-Logo-1.png?resize=300%2C45 300w"
         sizes="(max-width: 400px) 100vw, 400px"
       />
       <p className={css.surveyTitle}>

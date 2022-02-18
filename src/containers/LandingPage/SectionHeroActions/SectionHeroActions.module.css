@@ -1,9 +1,24 @@
 @import '../../../styles/propertySets.css';
 
 .heroActionsSection {
-  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.heroActionsContainer {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.23) 50%) !important;
+  background-color: #2a3039;
   color: #ffffff;
-  padding: 60px 30px;
+  padding: 20px 60px 60px;
+  max-width: 1300px;
+
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+
+  @media (--viewportMedium) {
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0)
+  }
 }
 
 .actions {
@@ -26,9 +41,18 @@
   }
 }
 
+.action:not(:first-child) {
+  padding-top: 160px;
+
+  @media (--viewportMedium) {
+    padding-top: 0px;
+  }
+}
+
 .actionIcon {
-  font-size: 40px;
-  padding: 50px 0px 30px;
+  font-size: 64px;
+  color: #afafaf;
+  padding: 30px 0px 30px;
 }
 
 .actionButton {
@@ -36,7 +60,8 @@
   color: #000000;
   border: none;
   padding: 0px 60px;
-  height: 60px;
+  line-height: 2em;
+  height: 56px;
   letter-spacing: 4px;
   font-size: 20px;
   font-family: 'Kanit', Helvetica, Arial, Lucida, sans-serif;
@@ -44,6 +69,8 @@
   text-transform: uppercase;
   background-color: #23abe2;
   cursor: pointer;
+  box-shadow: 0px 30px 110px 14px rgb(152 165 181 / 60%);
+  transition: all 300ms ease 0ms;
 }
 
 
@@ -53,10 +80,14 @@
   font-size: 22px;
   letter-spacing: 3px;
   line-height: 1.6em;
+  margin: 0;
+  text-align: center;
 }
 
 .actionDescription {
   font-family: 'Lato';
   line-height: 2em;
   font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
 }

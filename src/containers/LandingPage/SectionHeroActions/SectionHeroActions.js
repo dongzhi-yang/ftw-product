@@ -1,12 +1,11 @@
 import React from 'react';
 import css from './SectionHeroActions.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
 
 const SectionHeroActions = props => {
   return (
     <div className={css.heroActionsSection}>
-      <div className={css.sectionClass}>
+      <div className={css.heroActionsContainer}>
         <div className={css.actions}>
           <div className={css.action}>
             <button type="button" className={css.actionButton}>
@@ -34,12 +33,8 @@ const SectionHeroActions = props => {
   );
 };
 
-SectionHeroActions.defaultProps = { sectionClass: null };
+SectionHeroActions.defaultProps = {};
 
-const { string } = PropTypes;
-
-SectionHeroActions.propTypes = {
-  sectionClass: string,
-};
+SectionHeroActions.propTypes = {};
 
 export default SectionHeroActions;
