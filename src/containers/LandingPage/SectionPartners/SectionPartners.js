@@ -1,13 +1,16 @@
 import React from 'react';
 import css from './SectionPartners.module.css';
 import PropTypes from 'prop-types';
+import Zoom from 'react-reveal/Zoom';
 
 const SectionPartners = props => {
   return (
     <div className={css.partnerSection}>
       <div className={props.sectionClass}>
         <div className={css.sectionContainer}>
-          <h2 className={css.partnerTitle}>Green Partners</h2>
+          <Zoom>
+            <h2 className={css.partnerTitle}>Green Partners</h2>
+          </Zoom>
           <div className={css.partnerBlocks}>
             <div className={css.partnerBlock}>
               <h3 className={css.partnerHeading}>ADAREV</h3>
