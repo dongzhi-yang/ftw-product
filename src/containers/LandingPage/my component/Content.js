@@ -12,7 +12,9 @@ import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
 //import backgroundimg from '../../../assets/qublurry-car-copyote.png';
 import config from '../../../config';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default function Content()
 {
   const schemaImage = `${config.canonicalRootURL}`;
@@ -23,7 +25,7 @@ export default function Content()
         src={config.canonicalRootURL+toyotaImage}
         
     />
-<h1>Welcome to the Dawn of the New Auto Marketplace</h1>
+<h1 data-aos="zoom-in" data-aos-duration="1600">Welcome to the Dawn of the New Auto Marketplace</h1>
 </div>
 
 
@@ -32,7 +34,7 @@ export default function Content()
   <Container>
     <Row>  
     <Col className="inner-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy">SELL <span>🠢</span></Button>
+<Button href="#" alue="Buy" data-aos="zoom-in" data-aos-duration="1200">SELL <span>🡢</span></Button>
 <img
         className="inner-img"
         src={priceImage}
@@ -42,7 +44,7 @@ export default function Content()
 <p>Shop your vehicle in our auto marketplace and receive an instant offer.</p>
   </Col>
   <Col className="inner-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy">BUY <span>🠢</span></Button>
+<Button href="#" alue="Buy" data-aos="zoom-in" data-aos-duration="1200">BUY <span>🡢</span></Button>
 <img
         className="inner-img"
         src={moneyImage}
@@ -59,13 +61,14 @@ export default function Content()
 
 <div className="third-sec">
 <div className="third-inner">
-  <div className="main-heading"><h1><span className="logo-color">E</span>-Motive Delivers…</h1></div>
+  <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000"><span className="logo-color">E</span>-Motive Delivers…</h1></div>
   <Container>
     <Row>  
     <Col className="third-inner-sec" xs={12} lg={6} md={6}>
 <img
         className="third-inner-img"
         src={img1}
+		data-aos="fade-down"
         
     />
  <h3> Real-time Condition Reports</h3>
@@ -74,6 +77,7 @@ export default function Content()
 <img
         className="third-inner-img"
         src={img2}
+		data-aos="fade-down"
         
     />
  <h3>On-demand Vehicle Marketplace</h3>
@@ -84,6 +88,7 @@ export default function Content()
 <img
         className="third-inner-img"
         src={img3}
+		data-aos="fade-down"
         
     />
  <h3>Professional Inspections</h3>
@@ -92,6 +97,7 @@ export default function Content()
 <img
         className="third-inner-img"
         src={img4}
+		data-aos="fade-down"
         
     />
  <h3>Pick Up and Delivery</h3>
@@ -107,7 +113,7 @@ export default function Content()
 <div className="fourth-sec">
 <div className="fourth-inner">
   <Container>
-  <div className="main-heading"><h1>Green Partners</h1></div>
+  <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000">Green Partners</h1></div>
 
     <Row>  
     <Col className="fourth-inner-sec col-6" xs={12} lg={6}>
@@ -137,12 +143,12 @@ export default function Content()
   <img
         className="third-inner-img"
         src={img5}
-        
+        data-aos="zoom-in" data-aos-duration="1000"
     />
   </div>
 <div className="big-quote">
 
-<h3>“LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. QUISQUE VIVERRA QUAM IN LAOREET QUIS JUSTO. IVAMUS VARIUS SEMPER SUSCIPIT. ALIQUAM ERAT VOLUTPATUT NEC MAGNA ARCU. INTERDUM ET.”
+<h3 data-aos="zoom-in" data-aos-duration="1200">“LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. QUISQUE VIVERRA QUAM IN LAOREET QUIS JUSTO. IVAMUS VARIUS SEMPER SUSCIPIT. ALIQUAM ERAT VOLUTPATUT NEC MAGNA ARCU. INTERDUM ET.”
 </h3>
 
 </div>
@@ -184,7 +190,7 @@ export default function Content()
 
 
 
-<div className="sixth-sec">
+<div className="sixth-sec"  data-aos="fade-up" data-aos-duration="2000">
 <div className="sixth-inner">
   <Container fluid>
 

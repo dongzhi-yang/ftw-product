@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react"
 import Navbar from 'react-bootstrap/Navbar';
 import { Container, Nav, NavDropdown } from 'react-bootstrap';
 import '../../LandingPage/LandingPage.module.css';
@@ -12,9 +12,14 @@ export default function Header() {
 	
   const schemaImage = `${config.canonicalRootURL}`;
  
+      const [scroll, setScroll] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10)
+    })
+  }, [])
   
-  return <div className='topnav'>  
-
+  return <div  className={scroll ? "main-header scrolled topnav" : "topnav"}>  
 
   <>
 <div className='logo-sec'>
@@ -71,7 +76,6 @@ export default function Header() {
       </Nav>
 
           </>
-
   </div>;  
 }
 
