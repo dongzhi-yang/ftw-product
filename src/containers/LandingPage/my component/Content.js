@@ -20,12 +20,13 @@ export default function Content()
   const schemaImage = `${config.canonicalRootURL}`;
     return <div className="main-section"> <>
 <div className="main-banner">
+<h1 data-aos="zoom-in" data-aos-duration="1600">Welcome to the Dawn of the New Auto Marketplace</h1>
+
 <img
         className="service-img"
         src={config.canonicalRootURL+toyotaImage}
         
     />
-<h1 data-aos="zoom-in" data-aos-duration="1600">Welcome to the Dawn of the New Auto Marketplace</h1>
 </div>
 
 
@@ -33,23 +34,15 @@ export default function Content()
 <div className="second-inner">
   <Container>
     <Row>  
-    <Col className="inner-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy" data-aos="zoom-in" data-aos-duration="1200">SELL <span>🡢</span></Button>
-<img
-        className="inner-img"
-        src={priceImage}
-        
-    />
+    <Col className="inner-sec tag-sec" xs={12} lg={6}>
+<Button href="#" alue="Buy">SELL <span>🡢</span></Button>
+<i class="fa fa-tags"></i>
  <h3> SELL WITH 100% TRUST</h3>
 <p>Shop your vehicle in our auto marketplace and receive an instant offer.</p>
   </Col>
   <Col className="inner-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy" data-aos="zoom-in" data-aos-duration="1200">BUY <span>🡢</span></Button>
-<img
-        className="inner-img"
-        src={moneyImage}
-        
-    />
+<Button href="#" alue="Buy">BUY <span>🡢</span></Button>
+<i class="fa fa-money"></i>
  <h3>BUY WITH TOTAL CONFIDENCE</h3>
 <p>Explore our auto marketplace and find the right vehicle for you today.</p>
   </Col>
@@ -61,7 +54,7 @@ export default function Content()
 
 <div className="third-sec">
 <div className="third-inner">
-  <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000"><span className="logo-color">E</span>-Motive Delivers…</h1></div>
+  <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000"><em><span className="logo-color">E</span>-Motive</em> Delivers…</h1></div>
   <Container>
     <Row>  
     <Col className="third-inner-sec" xs={12} lg={6} md={6}>
@@ -155,29 +148,20 @@ export default function Content()
     <Row>  
     <Col className="fifth-inner-sec" xs={12} lg={4}>
 
-    <img
-        className="third-inner-img"
-        src={quote}
-        
-    />
+<i class="fa fa-quote-right" aria-hidden="true"></i>
+
 <p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
   </Col>
   <Col className="fifth-inner-sec" xs={12} lg={4}>
 
-    <img
-        className="third-inner-img"
-        src={quote}
-        
-    />
+ <i class="fa fa-quote-right" aria-hidden="true"></i>
+
 <p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
   </Col>
   <Col className="fifth-inner-sec" xs={12} lg={4}>
 
-<img
-    className="third-inner-img"
-    src={quote}
-    
-/>
+<i class="fa fa-quote-right" aria-hidden="true"></i>
+
 <p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
 </Col>
 </Row>
