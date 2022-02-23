@@ -35,13 +35,13 @@ export default function Content()
   <Container>
     <Row>  
     <Col className="inner-sec tag-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy">SELL <span>🡢</span></Button>
+<Button href="/l/new" alue="Sell">SELL <span>🡢</span></Button>
 <i class="fa fa-tags"></i>
  <h3> SELL WITH 100% TRUST</h3>
 <p>Shop your vehicle in our auto marketplace and receive an instant offer.</p>
   </Col>
   <Col className="inner-sec" xs={12} lg={6}>
-<Button href="#" alue="Buy">BUY <span>🡢</span></Button>
+<Button href="/s?" alue="Buy">BUY <span>🡢</span></Button>
 <i class="fa fa-money"></i>
  <h3>BUY WITH TOTAL CONFIDENCE</h3>
 <p>Explore our auto marketplace and find the right vehicle for you today.</p>
