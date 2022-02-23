@@ -7928,6 +7928,13 @@ jsprim@^1.2.2:
     array-includes "^3.1.1"
     object.assign "^4.1.1"
 
+jsx-runtime@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/jsx-runtime/-/jsx-runtime-1.2.0.tgz#3bae0dad50ec30541bb5b0420b104856694350cb"
+  integrity sha1-O64NrVDsMFQbtbBCCxBIVmlDUMs=
+  dependencies:
+    object-assign "^3.0.0"
+
 keyv@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/keyv/-/keyv-3.1.0.tgz"
@@ -8873,6 +8880,11 @@ oauth@0.9.x:
   version "0.9.15"
   resolved "https://registry.npmjs.org/oauth/-/oauth-0.9.15.tgz"
   integrity sha1-vR/vr2hslrdUda7VGWQS/2DPucE=
+
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+  integrity sha1-m+3VygiXlJvKR+f/QIBi1Un1h/I=
 
 object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
