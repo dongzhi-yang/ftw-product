@@ -31,7 +31,7 @@ export default function Footer() {
                         <li><a href="/l/new">Sell</a></li>
                         <li><a href="#">About <span className="logo-color">E</span>-Motive</a></li>
                         <li><a href="#">How It Works</a></li>
-                        <li><a href="/login">Sign In</a>/<a href="/signup">Sign Up</a></li>
+                        <li><a href="/login">Sign In</a><span>/</span><a href="/signup">Sign Up</a></li>
                     </ul>
                 </div>
                 <div className="col-lg-6 col-md-6 col-xs-6" xs={6}>

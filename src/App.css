@@ -11,7 +11,18 @@ h1, h2, h3, h4, h5, h6
 {
 	font-family: 'Kanit', sans-serif !important;
 }
-
+.sign-login.nav a {
+    padding: 0 5px !important;
+}
+footer li {
+    color: #fff;
+}
+.sign-login.nav {
+    margin: 0 !important;
+    padding: 0px 2px !important;
+    color: #fff;
+    margin-right: 15px !important;
+}
 .second-inner .inner-sec h3 {
     font-weight: 600;
     text-transform: uppercase;
@@ -30,7 +41,12 @@ h1, h2, h3, h4, h5, h6
     top: 0;
     z-index: 999;
 }
-
+.login-mbl-sec.hide-pc {
+    padding-left: 6px;
+}
+.login-mbl-sec.hide-pc a {
+    padding: 0px 5px !important;
+}
 .main-banner:after {
     content: "";
     background: linear-gradient(180deg,rgba(27,31,37,0) 35%,rgba(35,171,226,0.75) 100%);
@@ -41,7 +57,10 @@ h1, h2, h3, h4, h5, h6
     height: 100%;
     background-position: bottom;
 }
-
+.btn-primary:active:focus
+{
+	box-shadow:none !important;
+}
 
 .topnav {
   background-color: #535B5C;
@@ -172,12 +191,19 @@ footer a,footer a:hover {
     letter-spacing: 3px;
     line-height: 0.9em;
 }
-
+footer li:last-child span {
+    padding: 0px 4px;
+}
 
 @media(max-width:767px)
 {
 footer .container .row {
     margin: 0;
+}
+body span.navbar-toggler-icon {
+    background: none !important;
+    position: relative;
+    top: -2px;
 }
   footer .row>* {
     width: initial !important;
@@ -197,6 +223,10 @@ footer .container .row {
   max-width: none;
   position: relative;
   top: -3px;
+}
+.login-mbl-sec {
+    display: flex !important;
+    color: #fff;
 }
 .topnav .search-container button {
   padding: 3px 16px;
@@ -363,8 +393,8 @@ footer .row>* {
     margin-bottom: 26px;
 }
 .sixth-sec.aos-init.aos-animate {
-    -webkit-clip-path: polygon(15% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0% 90%, 0 0);
-    clip-path: polygon(15% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0% 90%, 0 0);
+    -webkit-clip-path: polygon(15% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0% 90%, 0 0) !important;
+    clip-path: polygon(15% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0% 90%, 0 0) !important;
 }
 .get-in-touch {
     padding-top: 50px !important;
@@ -384,6 +414,9 @@ footer .row>* {
 
     padding-bottom: 125px !important;
 }
+div#navbarScroll .dropdown-menu {
+    border: 0;
+}
 }
 
 @media(min-width:768px)
@@ -391,6 +424,7 @@ footer .row>* {
 	.fifth-sec .main-heading img {
     width: 324px;
 }
+
 	.third-inner {
 
     padding-bottom: 150px;
@@ -416,6 +450,9 @@ footer .row>* {
 }
   .topnav .dropdown-menu a:hover {
     background: none;
+}
+.main-header.scrolled.topnav .dropdown-menu {
+    top: 40px !important;
 }
 .search-container form {
     display: flex;
@@ -461,7 +498,8 @@ footer .row>* {
     width: 354px;
 }
 .topnav {
- 
+     transition-duration: 0.5s;
+
     height: 80px;
 }
 .topnav .search-container {
@@ -469,11 +507,12 @@ footer .row>* {
     top: -3px;
 }
 .main-header.scrolled.topnav {
-	transition: margin-top 0.4s ease-in-out;
+    height: 60px;
+    transition-duration: 0.5s;
 }
 .scrolled img.logo-img.pc-logo-img {
-    width: 239px;
-    top: 28px;
+    width: 195px;
+    top: 17px;
     transition-duration: 0.5s;
 }
 
@@ -499,7 +538,7 @@ footer .row>* {
   min-height: 400px;
     margin-top:20px;
 }
-.second-inner .btn, .second-inner .btn:hover {
+.second-inner .btn, .second-inner .btn:hover, .second-inner .btn:active, .second-inner .btn:focus {
     padding: 13px 68px;
     background-color: #25a7dc;
     border: 0;
@@ -513,7 +552,8 @@ footer .row>* {
     letter-spacing: 4px;
     font-size: 20px;
     font-family: 'Kanit';
-    box-shadow: 0px 30px 110px 14px rgb(152 165 181 / 60%);
+	position: relative;
+    box-shadow: 0px 30px 110px 14px rgb(152 165 181 / 60%) !important;
 }
 img.inner-img {
   filter: invert(0.8);
@@ -791,6 +831,19 @@ and (orientation: portrait)  {
     max-width: 100% !important;
     width: 100% !important;
 }
+.sign-login.hide-mbl.nav {
+    display: none;
+}
+.topnav .search-container {
+    top: 0;
+}
+.nav-main a.hide-pc.nav-link {
+    display: block !important;
+}
+.login-mbl-sec {
+    display: flex !important;
+    color: #fff;
+}
 }
 
 @media only screen 
@@ -943,7 +996,7 @@ a.hide-mbl.nav-link {
     background-color: #23abe2;
     padding-top: 40px;
     padding-right: 5% !important;
-    padding-bottom: 40px;
+    padding-bottom: 140px;
     padding-left: 5% !important;
 }
 .get-in-touch {
