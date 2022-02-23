@@ -46,13 +46,14 @@ export default function Header() {
         navbarScroll
       >
         <Nav.Link href="/l/new">Sell</Nav.Link>
-        <Nav.Link href="/l/new">Buy</Nav.Link>
+        <Nav.Link href="/s?">Buy</Nav.Link>
         <NavDropdown title="About E-Motive" id="navbarScrollingDropdown" className='logo-letter'>
           <NavDropdown.Item href="#action3">How It Works</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="/login">
-        Sign In / Sign Up
-        </Nav.Link>
+		<div className="login-mbl-sec hide-pc">
+        <Nav.Link href="/login" className="hide-pc">
+        Sign In</Nav.Link> / <Nav.Link href="/signup" className="hide-pc">Sign Up 
+        </Nav.Link></div>
 
       </Nav>
     </Navbar.Collapse>
@@ -70,8 +71,8 @@ export default function Header() {
    
  </div>
 
- <Nav>
-        <Nav.Link className="hide-mbl" href="/login">Sign In / Sign Up</Nav.Link>
+ <Nav className="sign-login hide-mbl">
+        <Nav.Link className="hide-mbl" href="/login">Sign In</Nav.Link> /  <Nav.Link className="hide-mbl" href="/signup">Sign Up</Nav.Link>
   
       </Nav>
 
