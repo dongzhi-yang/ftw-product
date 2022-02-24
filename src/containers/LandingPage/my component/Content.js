@@ -13,7 +13,6 @@ import quote from '../../../assets/quote.png';
 //import backgroundimg from '../../../assets/qublurry-car-copyote.png';
 import config from '../../../config';
 import AOS from "aos";
-import "aos/dist/aos.css";
 AOS.init();
 export default function Content()
 {
