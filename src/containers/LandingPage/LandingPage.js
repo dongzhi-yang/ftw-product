@@ -1,15 +1,12 @@
 import React from 'react';
 import '../../../src/App.css';
 //import Header from './my component/Header';
-import Footer from './my component/Footer';
-import Content from './my component/Content';
+//import Footer from './my component/Footer';
+//import Content from './my component/Content';
 
 export const LandingPageComponent = props => {
   return (
-      <>
-      <Content></Content>
-      <Footer></Footer>
-      </>
+      'sdfsdfsdf'
       );
 };
 
