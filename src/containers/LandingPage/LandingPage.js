@@ -1,12 +1,14 @@
 import React from 'react';
 import '../../../src/App.css';
-//import Header from './my component/Header';
+import Header from './my component/Header';
 import Footer from './my component/Footer';
-//import Content from './my component/Content';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const LandingPageComponent = props => {
   return (
       <>
+      <Header></Header>
       <Footer></Footer>
       </>
       );
