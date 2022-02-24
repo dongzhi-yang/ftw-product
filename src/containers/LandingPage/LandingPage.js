@@ -22,9 +22,9 @@ export const LandingPageComponent = props => {
   const schemaDescription = intl.formatMessage({ id: 'LandingPage.schemaDescription' });
   return (
       <>
-      <Header></Header>
+    
       <Content></Content>
-      <Footer></Footer>
+    
       </>
       );
 };
