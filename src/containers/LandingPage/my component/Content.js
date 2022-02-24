@@ -12,9 +12,9 @@ import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
 //import backgroundimg from '../../../assets/qublurry-car-copyote.png';
 import config from '../../../config';
-import AOS from "aos";
+//import AOS from "aos";
 //import "aos/dist/aos.css";
-AOS.init();
+//AOS.init();
 export default function Content()
 {
   const schemaImage = `${config.canonicalRootURL}`;
