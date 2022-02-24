@@ -9,9 +9,7 @@ import { injectIntl, intlShape } from '../../util/reactIntl';
 import { isScrollingDisabled } from '../../ducks/UI.duck';
 
 import '../../../src/App.css';
-import Header from './my component/Header';
-import Footer from './my component/Footer';
-import Content from './my component/Content';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -22,8 +20,6 @@ export const LandingPageComponent = props => {
   const schemaDescription = intl.formatMessage({ id: 'LandingPage.schemaDescription' });
   return (
       <>
-    
-      <Content></Content>
     
       </>
       );
