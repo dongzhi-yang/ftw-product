@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../../../config';
 import drawImage from '../../../assets/Method-Draw-Image.png';
-import 'font-awesome/css/font-awesome.min.css';
+//import 'font-awesome/css/font-awesome.min.css';
 
 export default function Footer() {
     const schemaImage = `${config.canonicalRootURL}`;

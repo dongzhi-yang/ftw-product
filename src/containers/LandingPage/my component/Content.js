@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Col, Row, Button} from 'react-bootstrap';
-import 'font-awesome/css/font-awesome.min.css';
+//import 'font-awesome/css/font-awesome.min.css';
 import toyotaImage from '../../../assets/Toyota-on-beach.jpg';
 import priceImage from '../../../assets/price-tag.png';
 import moneyImage from '../../../assets/money.png';
