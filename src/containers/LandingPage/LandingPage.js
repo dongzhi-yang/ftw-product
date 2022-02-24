@@ -25,7 +25,6 @@ import SectionHowItWorks from './SectionHowItWorks/SectionHowItWorks';
 import SectionFilteredSearches from './SectionFilteredSearches/SectionFilteredSearches';
 import css from './LandingPage.module.css';
 import '../../../src/App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const LandingPageComponent = props => {
   const { history, intl, location, scrollingDisabled } = props;
