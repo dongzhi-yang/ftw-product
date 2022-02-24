@@ -6,7 +6,7 @@ import config from '../../../config';
 import drawImage from '../../../assets/Method-Draw-Image.png';
 import draw1Image from '../../../assets/Method-Draw-Image-mbl.png';
 //import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
 	
