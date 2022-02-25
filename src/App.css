@@ -641,8 +641,7 @@ position: relative;
 }
 
 .third-sec {
-  background-image: linear-gradient(180deg,rgba(255,255,255,0.8) 40%,rgba(255,255,255,0.72) 100%),
-  url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/blurry-car-copy.jpg)!important;
+  
   background-repeat: no-repeat;
   background-size: cover;
   clip-path: polygon(50% 16%, 100% 0, 100% 100%, 75% 100%, 0 100%, 0% 60%, 0 0);
@@ -761,8 +760,6 @@ position: relative;
     letter-spacing: 1px;
 }
 .get-in-touch {
-  background-image: linear-gradient(180deg,rgba(35,171,226,0.43) 0%,rgba(0,0,0,0.66) 100%),
-  url(http://box5399.temp.domains/~stevesi5/freelance/wp-content/uploads/2022/02/suv-on-mountain.jpg);
   background-color: initial;
   padding-top: 150px;
   padding-right: 60px !important;

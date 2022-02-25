@@ -10,7 +10,8 @@ import img3 from '../../../assets/807303.png';
 import img4 from '../../../assets/1670915.png';
 import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
-//import backgroundimg from '../../../assets/qublurry-car-copyote.png';
+import backgroundimg from '../../../assets/blurry-car-copy.jpg';
+import getInTouch from '../../../assets/suv-on-mountain.jpg';
 import config from '../../../config';
 //import AOS from "aos";
 //import "aos/dist/aos.css";
@@ -51,8 +52,8 @@ export default function Content()
 </div>
 </div>
 
-
-<div className="third-sec">
+<div className="third-sec" style={{ 
+  backgroundImage: 'linear-gradient(180deg,rgba(255,255,255,0.8) 40%,rgba(255,255,255,0.72) 100%),url('+config.canonicalRootURL+backgroundimg+')'}}>
 <div className="third-inner">
   <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000"><em><span className="logo-color">E</span>-Motive</em> Delivers…</h1></div>
   <Container>
@@ -179,7 +180,7 @@ export default function Content()
   <Container fluid>
 
     <Row>  
-    <Col xs={12} lg={6} md={6} className="sixth-inner-sec get-in-touch col-6">
+    <Col xs={12} lg={6} md={6} className="sixth-inner-sec get-in-touch col-6" style={{backgroundImage: 'linear-gradient(180deg,rgba(35,171,226,0.43) 0%,rgba(0,0,0,0.66) 100%),url('+config.canonicalRootURL+getInTouch+')'}}>
     <h1>Get In Touch</h1>
     <h2>(888) 123-4562</h2>
 <h3>Location</h3>
