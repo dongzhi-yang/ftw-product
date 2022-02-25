@@ -57,6 +57,7 @@ const defaultDirectives = {
     'stats.g.doubleclick.net',
 
     '*.stripe.com',
+    'box5399.temp.domains',
   ],
   scriptSrc: [
     self,
@@ -67,8 +68,9 @@ const defaultDirectives = {
     'api.mapbox.com',
     '*.google-analytics.com',
     'js.stripe.com',
+    'unpkg.com',
   ],
-  styleSrc: [self, unsafeInline, 'fonts.googleapis.com', 'api.mapbox.com', 'maxcdn.bootstrapcdn.com'],
+  styleSrc: [self, unsafeInline, 'fonts.googleapis.com', 'api.mapbox.com', 'maxcdn.bootstrapcdn.com', 'unpkg.com'],
 };
 
 /**
