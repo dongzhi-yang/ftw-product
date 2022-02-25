@@ -32,7 +32,7 @@ const defaultDirectives = {
     'sentry.io',
     '*.stripe.com',
   ],
-  fontSrc: [self, data, 'assets-sharetribecom.sharetribe.com', 'fonts.gstatic.com'],
+  fontSrc: [self, data, 'assets-sharetribecom.sharetribe.com', 'fonts.gstatic.com', 'maxcdn.bootstrapcdn.com'],
   frameSrc: [self, '*.stripe.com'],
   imgSrc: [
     self,
@@ -68,7 +68,7 @@ const defaultDirectives = {
     '*.google-analytics.com',
     'js.stripe.com',
   ],
-  styleSrc: [self, unsafeInline, 'fonts.googleapis.com', 'api.mapbox.com'],
+  styleSrc: [self, unsafeInline, 'fonts.googleapis.com', 'api.mapbox.com', 'maxcdn.bootstrapcdn.com'],
 };
 
 /**
