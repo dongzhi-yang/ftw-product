@@ -11,7 +11,9 @@ import img4 from '../../../assets/1670915.png';
 import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
 import backgroundimg from '../../../assets/blurry-car-copy.jpg';
+import backgroundsolar from '../../../assets/solar-slide.jpg';
 import getInTouch from '../../../assets/suv-on-mountain.jpg';
+
 import config from '../../../config';
 //import AOS from "aos";
 //import "aos/dist/aos.css";
@@ -104,7 +106,8 @@ export default function Content()
 
 
 
-<div className="fourth-sec">
+<div className="fourth-sec" style={{ 
+  backgroundImage: 'linear-gradient(180deg,rgba(27,31,37,0.3) 0%,#1b1f25 100%),url('+config.canonicalRootURL+backgroundsolar+')'}}>
 <div className="fourth-inner">
   <Container>
   <div className="main-heading"><h1 data-aos="zoom-in" data-aos-duration="1000">Green Partners</h1></div>

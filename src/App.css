@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6
 footer li {
     color: #fff;
 }
+.fourth-sec {
+    background-size: cover;
+    background-position: top;
+}
 .sign-login.nav {
     margin: 0 !important;
     padding: 0px 2px !important;
@@ -374,6 +378,7 @@ body span.navbar-toggler-icon:after {
   text-align: center;
   padding-bottom: 40px;
 }
+
 .contact-form, .get-in-touch {
   padding-top: 50px !important;
   
@@ -677,7 +682,6 @@ position: relative;
   justify-content: center;
   padding-top: 170px;
   padding-bottom: 160px;
-      background: linear-gradient(180deg,rgba(27,31,37,0.3) 0%,#1b1f25cf 100%);
 }
 
 .fourth-sec .fourth-inner-sec {
@@ -1014,4 +1018,15 @@ a.hide-mbl.nav-link {
 }
 .fifth-inner-sec p {
     font-weight: 100;
+}
+
+
+@media(min-width:986px) and (max-width:1140px)
+{
+	.pc-logo-img {
+   
+    top: 30px;
+    transition-duration: 0.5s;
+    width: 210px;
+}
 }
