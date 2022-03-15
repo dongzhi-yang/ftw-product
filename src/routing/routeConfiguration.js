@@ -43,6 +43,7 @@ const StyleguidePage = loadable(() => import(/* webpackChunkName: "StyleguidePag
 
 const SearchPage = config.searchPageVariant === 'map' ? SearchPageWithMap : SearchPageWithList;
 const ListingPage = config.listingPageLayout === 'full-image' ? ListingPageFullImage : ListingPageHeroImage;
+const HowItWorksPage = loadable(() => import(/* webpackChunkName: "HowItWorksPage" */ '../containers/HowItWorksPage/HowItWorksPage'));
 
 export const ACCOUNT_SETTINGS_PAGES = [
   'ContactDetailsPage',
@@ -71,6 +72,11 @@ const routeConfiguration = () => {
       path: '/',
       name: 'LandingPage',
       component: LandingPage,
+    },
+    {
+      path: '/how-it-works',
+      name: 'HowItWorksPage',
+      component: HowItWorksPage,
     },
     {
       path: '/about',
