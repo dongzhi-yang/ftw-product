@@ -48,7 +48,7 @@ export default function Header() {
         <Nav.Link href="/l/new">Sell</Nav.Link>
         <Nav.Link href="/s?">Buy</Nav.Link>
         <NavDropdown title="About E-Motive" id="navbarScrollingDropdown" className='logo-letter'>
-          <NavDropdown.Item href="#action3">How It Works</NavDropdown.Item>
+          <NavDropdown.Item href="/how-it-works">How It Works</NavDropdown.Item>
         </NavDropdown>
 		<div className="login-mbl-sec hide-pc">
         <Nav.Link href="/login" className="hide-pc">
