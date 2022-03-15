@@ -14,6 +14,7 @@ import backgroundimg from '../../../assets/blurry-car-copy.jpg';
 import backgroundsolar from '../../../assets/solar-slide.jpg';
 import getInTouch from '../../../assets/suv-on-mountain.jpg';
 
+
 import config from '../../../config';
 //import AOS from "aos";
 //import "aos/dist/aos.css";
@@ -223,7 +224,6 @@ San Francisco, CA 94222</p>
 </Container>
 </div>
 </div>
-
 </>
     </div>;
 }

@@ -1030,3 +1030,238 @@ a.hide-mbl.nav-link {
     width: 210px;
 }
 }
+
+
+
+
+
+
+
+.how-banner {
+  height: 237px;
+  position: relative;
+  background-color: #fff;
+  background-position: 50%;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+.how-banner h1 {
+  font-weight: 500;
+
+  letter-spacing: 0.05em;
+  line-height: 0.9em;
+  text-shadow: 0em 0.1em 0.1em rgb(0 0 0 / 38%);
+  color: #fff;
+ 
+}
+
+.how-first-inner h4 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  text-align: left;
+}
+img.how-c-img {
+  height: 294px;
+  width: 294px;
+  object-fit: contain;
+}
+.how-first .row {
+  align-items: center;
+}
+.inner-how-img {
+  text-align: center;
+}
+.how-first .row {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.how-first .row {
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 6%;
+  padding-left: 6%;
+  background-color: #fdf5dd;
+  margin-top: 12px;
+}
+.how-banner {
+  margin-bottom: 45px;
+}
+
+
+.how-second, .how-third, .how-fourth {
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 6%;
+  padding-left: 6%;
+  background-color: #fdf5dd;
+  margin-top: 12px;
+  min-height: 0px;
+}
+.how-fifth strong span {
+  font-style: italic;
+}
+.how-first h4 strong span {
+  color: #25a7dc;
+}
+.how-fifth h4 {
+  width: 80%;
+  margin: 0 auto;
+}
+.how-fifth {
+  padding-top: 135px;
+  padding-bottom: 100px;
+}
+
+.how-fourth .inner-how-img {
+  text-align: left;
+}
+.how-fourth .row {
+  align-items: center;
+}
+.video-sec {
+  background-color: #f7f7f7;
+}
+.video-sec h4 {
+  text-align: center;
+}
+.video-sec {
+  padding-top: 55px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.video-box video {
+  width: 100%;
+}
+.video-sec h4 {
+  text-align: center;
+  padding-top: 22px;
+}
+.video-sec .row {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-fifth {
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 6%;
+  padding-left: 6%;
+  background-color: #a7def4;
+  margin-top: 12px;
+  min-height: 0px;
+}
+.divider-how, .divider-top {
+  position: relative;
+}
+
+.divider-how::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI3MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTY0MCAxNDBMMTI4MCAwSDB6Ii8+PC9nPjwvc3ZnPg==);
+  background-size: 100% 70px;
+  top: 0;
+  height: 70px;
+  z-index: 10;
+  display: block;
+  background-repeat-y: no-repeat;
+  /* height: 100%; */
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  content: "";
+  top: 12px;
+}
+
+.divider-top::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI3MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTY0MCAxMzlMMCAwdjE0MGgxMjgwVjBMNjQwIDEzOXoiLz48L2c+PC9zdmc+);
+  background-size: 100% 70px;
+  bottom: 0;
+  height: 70px;
+  z-index: 10;
+  position: absolute;
+  top: -70px;
+  content: "";
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.video-box {
+  border: 20px solid #a7def4;
+}
+
+@media(min-width:768px)
+{
+  .how-banner h1 {
+  font-size: 72px;
+  position: absolute;
+  left: 140px;
+  top: 37px;
+}
+.video-sec .row {
+  width: 80%;
+  
+}
+.how-third .row {
+  padding-top: 100px;
+  padding-bottom: 85px;
+}
+.how-second .row {
+  padding-top: 110px;
+  padding-bottom: 65px;
+}
+.how-fourth .row {
+  padding-top: 90px;
+  padding-bottom: 75px;
+}
+
+
+}
+
+@media(max-width:767px)
+{
+.how-banner h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 37px;
+}
+.how-first-inner h4 {
+  font-size: 20px;
+}
+.how-second .inner-how-img {
+  padding-bottom: 35px;
+}
+.how-second {
+  padding-top: 100px;
+  padding-bottom: 76px;
+}
+
+.how-third .row {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.how-fourth .row {
+  padding-top: 110px;
+  padding-bottom: 95px;
+}
+
+.how-fourth .inner-how-img {
+  text-align: center;
+  margin-bottom: 25px;
+}
+img.how-c-img {
+ 
+  width: 100%;
+}
+}
