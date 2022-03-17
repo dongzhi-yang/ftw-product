@@ -71,7 +71,7 @@ const LoginFormComponent = props => (
               name="email"
               autoComplete="email"
               label={emailLabel}
-              placeholder={emailPlaceholder}
+              placeholder="info@emotiveautoexchange.com"
               validate={validators.composeValidators(emailRequired, emailValid)}
             />
             <FieldTextInput

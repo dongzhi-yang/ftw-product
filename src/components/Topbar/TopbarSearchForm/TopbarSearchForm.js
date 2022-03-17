@@ -33,9 +33,7 @@ const KeywordSearchField = props => {
               id="keyword-search"
               ref={inputRef}
               type="text"
-              placeholder={intl.formatMessage({
-                id: 'TopbarSearchForm.placeholder',
-              })}
+              placeholder="make, model, color..."
               autoComplete="off"
             />
           );

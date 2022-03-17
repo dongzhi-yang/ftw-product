@@ -1,6 +1,7 @@
 @import '../assets/sanitize.css';
 @import './customMediaQueries.css';
 @import './propertySets.css';
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&display=swap');
 
 /* ================ Custom Properties aka CSS variables ================ */
 
@@ -18,9 +19,9 @@
   /* ================ Colors ================ */
 
   /*--marketplaceColor: #5d2bc0; /* hsl(260, 63%, 46%) */
-  --marketplaceColor: rebeccapurple;
-  --marketplaceColorLight: #7748d5; /* hsl(260, 63%, 56%), +10L from marketplaceColor */
-  --marketplaceColorDark: #34196c; /* hsl(260, 63%, 26%), -20L from marketplaceColor */
+  --marketplaceColor: #22ACE3;
+  --marketplaceColorLight: #22ACE3; /* hsl(260, 63%, 56%), +10L from marketplaceColor */
+  --marketplaceColorDark: #22ACE3; /* hsl(260, 63%, 26%), -20L from marketplaceColor */
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23a02cbf;
@@ -28,7 +29,7 @@
   --successColor: #2ecc71;
   --successColorDark: #239954;
   --successColorLight: #f0fff6;
-  --failColor: #ff0000;
+  --failColor: #FAE6AB;
   --failColorLight: #fff0f0;
   --attentionColor: #ffaa00;
   --attentionColorLight: #fff7f0;
@@ -38,14 +39,14 @@
   --matterColorDark: #000000;
   --matterColor: #4a4a4a;
   --matterColorAnti: #b2b2b2;
-  --matterColorNegative: #e7e7e7;
+  --matterColorNegative: #22ACE3;
   --matterColorBright: #fcfcfc;
   --matterColorLight: #ffffff;
 
   --matterColorLightTransparent: rgba(255, 255, 255, 0.65);
 
   /* ================ Font ================ */
-  --fontFamily: 'poppins', Helvetica, Arial, sans-serif;
+  --fontFamily: 'Lato', Helvetica, Arial, sans-serif;
 
   --fontWeightRegular: 400;
   --fontWeightMedium: 500;
@@ -158,7 +159,7 @@
 /* ================ Global element styles ================ */
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Kanit', sans-serif;
   -webkit-font-smoothing: antialiased; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
   -moz-osx-font-smoothing: grayscale; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
   text-rendering: optimizeSpeed;
@@ -240,7 +241,7 @@ label {
 }
 
 button {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 select {
@@ -276,9 +277,45 @@ textarea {
 
 .fontsLoaded {
   & body {
-    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
   }
   & button {
-    font-family: 'poppins', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
   }
+}
+
+.AuthenticationPage_content__28R-N
+{
+& h1{
+  font-family: 'Kanit', sans-serif;
+
+}
+}
+
+.Topbar_desktop__29vhF 
+{
+
+  & .TopbarDesktop_root__3xmH3
+  {
+    background-color:#535B5C;
+  }
+
+}
+
+
+nav.TopbarDesktop_root__3xmH3
+{
+  & a
+  {
+    color:#ffffff;
+
+    
+  }
+ 
+ 
+}
+
+.TopbarSearchForm_desktopIcon__w46rQ
+{
+  background-color: #535B5C;
 }

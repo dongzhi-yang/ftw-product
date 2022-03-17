@@ -8,11 +8,14 @@ import img1 from '../../../assets/1950630.png';
 import img2 from '../../../assets/59505.png';
 import img3 from '../../../assets/807303.png';
 import img4 from '../../../assets/1670915.png';
-import img5 from '../../../assets/SurveyMonkey-Logo-1.png';
 import quote from '../../../assets/quote.png';
 import backgroundimg from '../../../assets/blurry-car-copy.jpg';
 import backgroundsolar from '../../../assets/solar-slide.jpg';
 import getInTouch from '../../../assets/suv-on-mountain.jpg';
+
+import testi1 from '../../../assets/testi1.webp';
+import testi2 from '../../../assets/testi2.webp';
+import testi3 from '../../../assets/testi3.webp';
 
 
 import config from '../../../config';
@@ -138,36 +141,44 @@ export default function Content()
   <Container>
   <div className="main-heading">
 
-  <img
-        className="third-inner-img"
-        src={img5}
-        data-aos="zoom-in" data-aos-duration="1000"
-    />
+  <h2>Here’s what our customers are saying…</h2>
   </div>
 <div className="big-quote">
 
-<h3 data-aos="zoom-in" data-aos-duration="1200">“LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. QUISQUE VIVERRA QUAM IN LAOREET QUIS JUSTO. IVAMUS VARIUS SEMPER SUSCIPIT. ALIQUAM ERAT VOLUTPATUT NEC MAGNA ARCU. INTERDUM ET.”
+<h3 data-aos="zoom-in" data-aos-duration="1200">“I FOUND THE SITE TO BE VERY USER-FRIENDLY AND PARTICULARLY LIKE THE GUIDED VEHICLE INSPECTION.”
 </h3>
 
 </div>
     <Row>  
     <Col className="fifth-inner-sec" xs={12} lg={4}>
 
-<i class="fa fa-quote-right" aria-hidden="true"></i>
-
-<p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
+    <img
+        className="third-inner-img"
+        src={testi1}
+        
+    />
+<p>“I like the ease and accessibility to the app.”</p>
+<p>—Thomas J.</p>
   </Col>
   <Col className="fifth-inner-sec" xs={12} lg={4}>
 
- <i class="fa fa-quote-right" aria-hidden="true"></i>
-
-<p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
+  <img
+        className="third-inner-img"
+        src={testi2}
+        
+    />
+<p>“I found the site to be very user-friendly and particularly like the guided vehicle inspection.”</p>
+<p>—Steve S.</p>
   </Col>
   <Col className="fifth-inner-sec" xs={12} lg={4}>
+  <img
+        className="third-inner-img"
+        src={testi3}
+        
+    />
+<p>“I like the simplicity..”</p>
+<p>Luke C.</p>
 
-<i class="fa fa-quote-right" aria-hidden="true"></i>
-
-<p>“Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis”</p>
 </Col>
 </Row>
 </Container>
@@ -188,8 +199,7 @@ export default function Content()
     <h1>Get In Touch</h1>
     <h2>(888) 123-4562</h2>
 <h3>Location</h3>
-<p>2345 Divi St<br></br>
-San Francisco, CA 94222</p>
+<p>1100 Peachtree Street NE Suite<br></br> 950, Atlanta, Georgia 30309</p>
   </Col>
   <Col xs={12} lg={6} md={6} className="sixth-inner-sec contact-form col-6">
 

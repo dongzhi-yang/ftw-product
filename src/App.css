@@ -3,7 +3,7 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
 body{
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Lato', sans-serif !important;
 }
 
 
@@ -434,7 +434,8 @@ div#navbarScroll .dropdown-menu {
     padding-bottom: 150px;
 }
 .fifth-inner-sec {
-    margin-top: 30px;
+  margin-top: 30px;
+  padding: 0px 25px;
 }
 .fifth-inner {
     padding-top: 49px;
@@ -724,11 +725,10 @@ position: relative;
 }
 .big-quote h3 {
     font-size: 22px;
-    color: #e3582d!important;
+    color: #000!important;
     letter-spacing: 3px;
     line-height: 1.4em;
     font-weight: 500;
-    width: 76%;
     margin: 0 auto;
     margin-top: 38px;
 }
@@ -742,7 +742,6 @@ position: relative;
 }
 .sixth-sec p {
     font-size: 18px;
-    font-weight: 100;
 }
 .sixth-sec h3 {
     font-weight: 500;
@@ -1016,9 +1015,7 @@ a.hide-mbl.nav-link {
     border-radius: 100px;
     padding: 10px;
 }
-.fifth-inner-sec p {
-    font-weight: 100;
-}
+
 
 
 @media(min-width:986px) and (max-width:1140px)
@@ -1203,6 +1200,13 @@ img.how-c-img {
 
 @media(min-width:768px)
 {
+
+  .big-quote h3 {
+   
+    width: 75%;
+    
+}
+
   .how-banner h1 {
   font-size: 72px;
   position: absolute;
@@ -1264,4 +1268,33 @@ img.how-c-img {
  
   width: 100%;
 }
+}
+
+.LoginForm_bottomWrapper__1f8sc button {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.fifth-sec .main-heading h2 {
+  font-size: 36px;
+  color: #22ace3!important;
+  letter-spacing: 1px;
+}
+
+.fifth-sec img.third-inner-img {
+  width: 100%;
+}
+
+.fifth-inner .fifth-inner-sec p {
+  text-align: left;
+}
+
+.fifth-inner .fifth-inner-sec p:last-child {
+  margin-top: 0 !important;
+}
+
+input#keyword-search, input#keyword-search::placeholder {
+  color: #fff !important;
 }

@@ -139,7 +139,7 @@ const SignupFormComponent = props => (
               name="email"
               autoComplete="email"
               label={emailLabel}
-              placeholder={emailPlaceholder}
+              placeholder="info@emotiveautoexchange.com"
               validate={validators.composeValidators(emailRequired, emailValid)}
             />
             <div className={css.name}>
@@ -150,7 +150,7 @@ const SignupFormComponent = props => (
                 name="fname"
                 autoComplete="given-name"
                 label={firstNameLabel}
-                placeholder={firstNamePlaceholder}
+                placeholder="Emotive"
                 validate={firstNameRequired}
               />
               <FieldTextInput
@@ -160,7 +160,7 @@ const SignupFormComponent = props => (
                 name="lname"
                 autoComplete="family-name"
                 label={lastNameLabel}
-                placeholder={lastNamePlaceholder}
+                placeholder="Auto Exchange"
                 validate={lastNameRequired}
               />
             </div>
