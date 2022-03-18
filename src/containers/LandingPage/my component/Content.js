@@ -143,12 +143,6 @@ export default function Content()
 
   <h2>Here’s what our customers are saying…</h2>
   </div>
-<div className="big-quote">
-
-<h3 data-aos="zoom-in" data-aos-duration="1200">“I FOUND THE SITE TO BE VERY USER-FRIENDLY AND PARTICULARLY LIKE THE GUIDED VEHICLE INSPECTION.”
-</h3>
-
-</div>
     <Row>  
     <Col className="fifth-inner-sec" xs={12} lg={4}>
 
@@ -199,7 +193,7 @@ export default function Content()
     <h1>Get In Touch</h1>
     <h2>(888) 123-4562</h2>
 <h3>Location</h3>
-<p>1100 Peachtree Street NE Suite<br></br> 950, Atlanta, Georgia 30309</p>
+<p>Georgia Institute of Technology,<br></br> North Ave NW, Atlanta, GA 30332, USA</p>
   </Col>
   <Col xs={12} lg={6} md={6} className="sixth-inner-sec contact-form col-6">
 
