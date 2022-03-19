@@ -191,7 +191,7 @@ export default function Content()
     <Row>  
     <Col xs={12} lg={6} md={6} className="sixth-inner-sec get-in-touch col-6" style={{backgroundImage: 'linear-gradient(180deg,rgba(35,171,226,0.43) 0%,rgba(0,0,0,0.66) 100%),url('+config.canonicalRootURL+getInTouch+')'}}>
     <h1>Get In Touch</h1>
-    <h2>(888) 123-4562</h2>
+    <h2>info@emotiveautoexchange.com</h2>
 <h3>Location</h3>
 <p>Georgia Institute of Technology,<br></br> North Ave NW, Atlanta, GA 30332, USA</p>
   </Col>
